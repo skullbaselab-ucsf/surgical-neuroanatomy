@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Craniometric Points — UCSF Surgical Neuroanatomy Collection</title>
+  <link rel="stylesheet" href="styles/root.css" />
+  <style>
+    .figure-media { background:#070d11; }
+    .figure-button { display:block; width:100%; height:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+    .figure-button img { width:100%; height:100%; object-fit:contain !important; }
+    .figure-hint { position:absolute;right:14px;bottom:12px;z-index:2;padding:6px 8px;background:rgba(7,13,16,.82);color:#c8d5d2;font:10px var(--font-mono);border:1px solid rgba(159,212,209,.28); }
+    .slide-content { min-height:0; }
+    .source-box { border-top:1px solid var(--color-border); padding-top:17px; margin-top:22px; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center; padding:2vh 2vw; background:rgba(2,6,8,.97); }
+    .lightbox.open { display:flex; }
+    .lightbox img { width:96vw; height:92vh; max-width:none; max-height:none; object-fit:contain; border:1px solid #46575c; box-shadow:0 24px 80px #000; }
+    .lightbox .close { position:fixed; top:22px; right:28px; padding:8px 12px; border:1px solid #56676a; background:#0b151a; color:#dbe3df; cursor:pointer; font:12px var(--font-mono); }
+    .lightbox .lightbox-caption { position:fixed; left:3vw; bottom:18px; color:#adbab7; font:11px var(--font-mono); }
+    .author-list { max-width:620px; color:#aeb9b6; font-size:12px; line-height:1.5; }
+    .author-list b { color:var(--color-bone); }
+    .cover-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:end; gap:60px; height:100%; }
+    .cover-rule { width:100%; max-width:520px; height:1px; background:var(--color-border); margin:32px 0 20px; }
+    .single { display:grid; grid-template-columns:1fr; min-height:0; }
+    .single .media { min-height:0; }
+    .with-side { display:grid; grid-template-columns:1.5fr .8fr; gap:24px; min-height:0; }
+    .with-side .side { align-self:center; }
+    .pos-grid { display:grid; gap:14px; }
+    .pos-grid .measure { border-bottom:1px solid var(--color-border); }
+    @media (max-width:1100px){ .cover-grid{grid-template-columns:1fr}.with-side{grid-template-columns:1fr} }
+  </style>
+</head>
+<body class="deck-shell presentation">
+  <main class="deck" id="deck" aria-label="Craniometric points teaching presentation">
+
+    <section class="slide active" data-title="Opening">
+      <div class="cover-grid">
+        <div>
+          <p class="eyebrow">UCSF Surgical Neuroanatomy Collection · resident teaching</p>
+          <div class="title-mark" aria-hidden="true"></div>
+          <h1>Craniometric<br />points</h1>
+          <p class="lede">The skull's coordinate system — external landmarks mapped to the cortex, ventricles, and venous sinuses beneath them.</p>
+          <div class="cover-rule"></div>
+          <div class="title-meta"><span>9 models</span><span>11 figures</span></div>
+          <p class="author-list"><b>Vera Vigo · Kimberly Cornejo · Lizbeth Nunez · Adib A. Abla · Roberto Rodriguez Rubio</b><br />Cureus 12(6): e8643 · published June 15, 2020</p>
+        </div>
+        <div>
+          <p class="question">Teaching frame</p>
+          <p class="lede" style="font-size:24px;color:var(--color-bone)">Gyri → sutures → junctions → prominences → cortex → ventricles → veins → keyholes</p>
+          <div class="look"><b>How to use this deck</b> Click any figure to enlarge it. Rotate each model and click its numbered annotations — every point on the surface has a structure underneath.</div>
+        </div>
+      </div>
+      <div class="footer"><span>Based on Vigo et al., <i>Immersive Surgical Anatomy of the Craniometric Points</i>, Cureus 2020.</span><span class="slide-number">01 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Cortical gyri">
+      <div><p class="eyebrow">01 · Cortical orientation — figure 1 + model 1</p><h2>Name the gyri<br />first.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 1 · main cortical gyri</span><button class="figure-button" data-full="assets/images/fig-i01.jpg" aria-label="Enlarge Figure 1"><img src="assets/images/fig-i01.jpg" alt="Overview of the main cortical gyri: lateral and medial surfaces of the brain" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 1 · sulci and gyri of the left hemisphere</span><iframe title="Sulci and gyri of the left hemisphere model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/216d50de44084049800ac0d548fb51b5/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> craniometry only works if the cortical targets are familiar — the lateral and medial gyri are the end points every surface landmark points to.</span><span class="slide-number">02 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Sutures">
+      <div><p class="eyebrow">02 · Sutures — figure 2 + model 2</p><h2>Sutures are<br />the grid.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 2 · sutures, junctions, prominences</span><button class="figure-button" data-full="assets/images/fig-i02.jpg" aria-label="Enlarge Figure 2"><img src="assets/images/fig-i02.jpg" alt="Overview of the main sutures, suture junction points, and prominences of the human skull in anterior, lateral, superior, and posterior views" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 2 · sutures and craniometric points</span><iframe title="Skull with labeled sutures and craniometric points of the exocranial and endocranial surfaces model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/c082f0db5e2b4da7b0568e32cedee2a1/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> coronal, sagittal, squamosal, lambdoid, and the three anterolateral sutures — the coronal can be palpated through the scalp as a subtle depression.</span><span class="slide-number">03 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Points on the skin">
+      <div><p class="eyebrow">03 · Suture junctions — figure 3 + model 3</p><h2>Points you can<br />draw on skin.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 3 · craniometric points on the skin</span><button class="figure-button" data-full="assets/images/fig-i03.jpg" aria-label="Enlarge Figure 3"><img src="assets/images/fig-i03.jpg" alt="Principal craniometric points depicted on the skin: superior and posterior views of the head" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 3 · surgical craniometric points with lengths</span><iframe title="Skull with the main craniometric points and their respective lengths model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/18da05b1ba844217a7970ea6082d8538/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> bregma, lambda, stephanion, euryon, inion — the precentral gyrus lies ~4.5 cm posterior to bregma; the superior Rolandic point, 5 cm behind it on the sagittal suture.</span><span class="slide-number">04 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Osteometric distances">
+      <div><p class="eyebrow">04 · Prominences — figure 4</p><h2>Measure<br />the skull.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 4 · osteometric points and prominences</span><button class="figure-button" data-full="assets/images/fig-i04.jpg" aria-label="Enlarge Figure 4"><img src="assets/images/fig-i04.jpg" alt="Osteometric points and prominences of the human skull with mean distances of the main craniometric points" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Distances worth memorizing</p>
+          <div class="pos-grid">
+            <div class="measure"><strong>12–14 cm</strong><span>nasion → bregma</span></div>
+            <div class="measure"><strong>13 cm</strong><span>bregma → lambda, along the sagittal suture</span></div>
+            <div class="measure"><strong>24–26 cm</strong><span>nasion → lambda</span></div>
+            <div class="measure"><strong>~17 cm</strong><span>glabella → opisthocranion — the skull's length</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the nasion sits at the axial level of the corpus callosum; the opisthocranion marks the plane of the calcarine fissure and primary visual cortex.</span><span class="slide-number">05 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Dural exposure">
+      <div><p class="eyebrow">05 · Cranial windows — model 4</p><h2>Windows to<br />the dura.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 4 · dural exposure</span><iframe title="Specimen with monolateral cranial windows exposing the dura and annotated craniometric points model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/1b1a9600cc7443bd999ae7b76d38c9ee/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the pterion stands over the anterior branch of the middle meningeal artery and the Sylvian fissure — and the STL marks the superior limit of the inferior frontal gyrus.</span><span class="slide-number">06 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Cortical exposure">
+      <div><p class="eyebrow">06 · Cortical correlation — model 5</p><h2>Open the dura,<br />keep the map.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 5 · cortical exposure</span><iframe title="Specimen with bilateral window dissections, dura opened, principal cortical points and their representation on the skull surface model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/1ff1298b03c64e2dba526fa765b12278/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> bilateral windows with the dura opened — each annotated cortical point is projected back onto the skull surface, so the correlation is visible in both directions.</span><span class="slide-number">07 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Seven windows">
+      <div><p class="eyebrow">07 · Cortical surface — figure 5</p><h2>Seven windows,<br />one map.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 5 · craniometric points and cortical surface</span><button class="figure-button" data-full="assets/images/fig-i05.jpg" aria-label="Enlarge Figure 5"><img src="assets/images/fig-i05.jpg" alt="Relationship of relevant craniometric points and cortical surface structures through seven bony windows outlining the main cranial landmarks" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">The seven windows</p>
+          <ul class="bullets">
+            <li>Superior frontal, inferior frontal, sphenoidal.</li>
+            <li>Superior parietal, inferior parietal.</li>
+            <li>Temporal and occipital.</li>
+            <li>Each frames a named cortical structure under a named surface point.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the Sylvian fissure's anterior and posterior Sylvian points are the key references for splitting the fissure — and the squamous suture traces its direction.</span><span class="slide-number">08 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Subcortical structures">
+      <div><p class="eyebrow">08 · Ventricular access — figure 6 + model 6</p><h2>Below the cortex,<br />the ventricles.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 6 · subcortical structures</span><button class="figure-button" data-full="assets/images/fig-i06.jpg" aria-label="Enlarge Figure 6"><img src="assets/images/fig-i06.jpg" alt="Subcortical structures and craniometric points: white matter dissection showing the perisylvian network and the body of the lateral ventricle" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 6 · ventricular exposure</span><iframe title="Specimen with bilateral window dissections showing the ventricular system on the left half head model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/fedb7fe231d84298bfa1ad0124dd674a/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> reaching the ventricles means crossing grey and white matter — surface landmarks define the safe corridors in.</span><span class="slide-number">09 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Keyholes and ventricular access">
+      <div><p class="eyebrow">09 · Strategic burr holes — model 7</p><h2>Four named<br />entry points.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media"><span class="model-tag">interactive model 7 · keyholes and ventricular accesses</span><iframe title="Semitransparent skull depicting the left hemisphere and ventricular system with strategic burr holes model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/356d9b3473bf4df0b64d275c79c04395/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+        <div class="side">
+          <p class="question">Name the point, name the target</p>
+          <ul class="bullets">
+            <li><b>Kocher:</b> 11 cm behind nasion, 1–2 cm anterior to the coronal suture, on the midpupillary line → frontal horn.</li>
+            <li><b>Keen:</b> 2–3 cm above and behind the pinna → trigone.</li>
+            <li><b>Frazier:</b> 6 cm above the inion, 3–4 cm off midline → occipital horn.</li>
+            <li><b>Dandy:</b> 3 cm above the inion, 2 cm lateral → occipital horn.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> Kocher's precoronal point stays lateral to the sagittal sinus and anterior to the motor strip — 6 cm of catheter reaches the frontal horn.</span><span class="slide-number">10 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Finding the central sulcus">
+      <div><p class="eyebrow">10 · Cortical areas — figure 7 + model 8</p><h2>Three methods,<br />one sulcus.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 7 · central sulcus methods</span><button class="figure-button" data-full="assets/images/fig-i07.jpg" aria-label="Enlarge Figure 7"><img src="assets/images/fig-i07.jpg" alt="Main craniometric methods to identify the central sulcus: Taylor-Haughton, Broca, and Rhoton methods" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 8 · central sulcus and white matter</span><iframe title="Specimen with bilateral window dissections and white matter dissection showing the central sulcus model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/5bd1de65ef9945468264249f73469df8/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> Taylor-Haughton, Broca, and Rhoton all reconstruct the same line — from the superior Rolandic point down to the inferior Rolandic point.</span><span class="slide-number">11 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Dural sinuses">
+      <div><p class="eyebrow">11 · Venous anatomy — figure 8 + model 9</p><h2>The sinuses<br />under the sutures.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 8 · dural sinuses and veins</span><button class="figure-button" data-full="assets/images/fig-i08.jpg" aria-label="Enlarge Figure 8"><img src="assets/images/fig-i08.jpg" alt="Major dural sinuses and veins of the brain: superior sagittal sinus, torcula Herophili, transverse and sigmoid sinuses" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 9 · venous structures</span><iframe title="Hemisected skull showing the relationship between exocranial structures and critical venous structures model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/60b7f2545b6b44ed9b8567bbc9e04c32/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the superior nuchal line marks the transverse sinus; the transverse sinuses run from the torcula along the inion–asterion line.</span><span class="slide-number">12 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Sylvian fissure and Labbé">
+      <div><p class="eyebrow">12 · Venous anatomy — figure 9</p><h2>Respect the vein<br />of Labbé.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 9 · Sylvian fissure and vein of Labbé</span><button class="figure-button" data-full="assets/images/fig-i09.jpg" aria-label="Enlarge Figure 9"><img src="assets/images/fig-i09.jpg" alt="Sylvian fissure exposed after selective drilling over the squamosal suture, with the course of the vein of Labbé" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Where does Labbé drain?</p>
+          <ul class="bullets">
+            <li>Arises from the middle of the Sylvian fissure, descends to the transverse sinus.</li>
+            <li>Found 0.8–1.5 cm above the zygomatic arch, 2–5 cm behind the external auditory meatus.</li>
+            <li>Joins the tentorial venous group ~7 mm from the superior petrosal sinus.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> Trolard crosses the postcentral sulcus 1.2 cm behind the central sulcus; Labbé anchors the posterior Sylvian region — sacrifice neither.</span><span class="slide-number">13 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Asterion">
+      <div><p class="eyebrow">13 · Posterolateral keyhole — figure 10</p><h2>The asterion<br />lies.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 10 · asterion and transverse-sigmoid junction</span><button class="figure-button" data-full="assets/images/fig-i10.jpg" aria-label="Enlarge Figure 10"><img src="assets/images/fig-i10.jpg" alt="Overview of the asterion and the transverse-sigmoid sinus junction in posterolateral, interior, and inferior skull views" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Finding the transverse-sigmoid junction</p>
+          <ul class="bullets">
+            <li>The asterion overlies the transverse sinus more often than the junction itself.</li>
+            <li><b>Ribas:</b> junction 1 cm anterior to the asterion, burr hole edge at the petromastoid line.</li>
+            <li><b>Teranishi:</b> burr hole 0.65 cm inferior and 0.65 cm lateral to the asterion.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> junction of lambdoid, parietomastoid, and occipitomastoid sutures — the superior limit of the retrosigmoid craniotomy, and the gateway to the occipital artery below.</span><span class="slide-number">14 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Strategic burr holes">
+      <div><p class="eyebrow">14 · Anterolateral keyholes — figure 11</p><h2>One hole,<br />two cavities.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 11 · strategic burr hole positions</span><button class="figure-button" data-full="assets/images/fig-i11.jpg" aria-label="Enlarge Figure 11"><img src="assets/images/fig-i11.jpg" alt="Strategic burr hole positions marked as green spheres on the lateral aspect of the skull" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">The MacCarty keyhole</p>
+          <ul class="bullets">
+            <li>On the frontosphenoidal suture — 6.8 mm superior and 4.5 mm posterior to the frontozygomatic suture.</li>
+            <li>Reveals frontal dura above and periorbita below.</li>
+            <li>In the pterional approach: 5–6 mm posterior to the three-suture junction.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> sutures, prominences, and points have located craniotomy burr holes since the 19th century — the modern keyhole is a measured point, not a guess.</span><span class="slide-number">15 / 16</span></div>
+    </section>
+
+    <section class="slide" data-title="Article source">
+      <div><p class="eyebrow">15 · Source</p><h2>Article source</h2></div>
+      <div class="slide-content" style="display:flex;align-items:center;justify-content:center">
+        <div class="media figure-media" style="width:min(880px,90vw);height:430px"><span class="model-tag">article source</span><div style="padding:48px;display:flex;flex-direction:column;justify-content:center;height:100%"><p class="eyebrow">Vigo et al. · Cureus 2020</p><h3 style="font:400 42px/1.08 var(--font-display);color:var(--color-bone);margin-bottom:26px">Immersive Surgical Anatomy of the Craniometric Points</h3><div class="source-box small"><a href="https://www.cureus.com/articles/31561-immersive-surgical-anatomy-of-the-craniometric-points" target="_blank" rel="noopener">Open the article ↗</a><br /><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7366040/" target="_blank" rel="noopener">Open full-text media ↗</a><br /><a href="https://sketchfab.com/SBCVL_UCSF" target="_blank" rel="noopener">SBCVL_UCSF on Sketchfab ↗</a></div></div></div>
+      </div>
+      <div class="footer"><span>Primary article and open-access media source. All nine volumetric models of the article are embedded as interactive models above.</span><span class="slide-number">16 / 16</span></div>
+    </section>
+  </main>
+
+  <nav class="nav" id="nav" aria-label="Slide navigation"></nav>
+  <div class="controls" aria-label="Presentation controls"><a href="../../index.html" style="padding:8px 11px;border:1px solid var(--color-border);background:rgba(10,16,21,.82);color:#b8c4c1;font:11px var(--font-mono);text-decoration:none">← collection</a><button id="prev" type="button">← previous</button><button id="next" type="button">next →</button><button id="fullscreen" type="button">fullscreen</button></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure"><button class="close" id="closeLightbox" type="button">close ×</button><img id="lightboxImage" alt="" /><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.slide')];
+      const nav = document.getElementById('nav');
+      let index = 0;
+      slides.forEach((slide, i) => { const b=document.createElement('button'); b.type='button'; b.textContent=String(i+1).padStart(2,'0'); b.title=slide.dataset.title||`Slide ${i+1}`; b.addEventListener('click',()=>show(i)); nav.appendChild(b); });
+      const buttons=[...nav.querySelectorAll('button')];
+      function show(i){
+        index=Math.max(0,Math.min(slides.length-1,i));
+        slides.forEach((s,n)=>{ s.classList.toggle('active',n===index); });
+        buttons.forEach((b,n)=>b.classList.toggle('active',n===index));
+        slides[index].querySelectorAll('iframe[data-src]').forEach(frame=>{frame.src=frame.dataset.src; frame.removeAttribute('data-src');});
+        history.replaceState(null,'',`#${index+1}`);
+      }
+      document.getElementById('prev').addEventListener('click',()=>show(index-1)); document.getElementById('next').addEventListener('click',()=>show(index+1)); document.getElementById('fullscreen').addEventListener('click',()=>document.documentElement.requestFullscreen?.());
+      document.addEventListener('keydown',e=>{ if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1);} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1);} if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1); if(e.key==='Escape')closeBox(); });
+      const box=document.getElementById('lightbox'), image=document.getElementById('lightboxImage'), caption=document.getElementById('lightboxCaption');
+      function openBox(button){ image.src=button.dataset.full; image.alt=button.querySelector('img')?.alt||''; caption.textContent=image.alt+' · click outside or press Escape to close'; box.classList.add('open'); document.getElementById('closeLightbox').focus(); }
+      function closeBox(){ box.classList.remove('open'); image.src=''; }
+      document.querySelectorAll('.figure-button').forEach(b=>{b.addEventListener('click',()=>openBox(b)); b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox(b);}});});
+      document.getElementById('closeLightbox').addEventListener('click',closeBox); box.addEventListener('click',e=>{if(e.target===box)closeBox();});
+      const requested=Number(location.hash.slice(1)); if(requested>=1&&requested<=slides.length)index=requested-1; show(index);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pterional Approach — UCSF Surgical Neuroanatomy Collection</title>
+  <link rel="stylesheet" href="styles/root.css" />
+  <style>
+    .figure-media { background:#070d11; }
+    .figure-button { display:block; width:100%; height:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+    .figure-button img { width:100%; height:100%; object-fit:contain !important; }
+    .figure-hint { position:absolute;right:14px;bottom:12px;z-index:2;padding:6px 8px;background:rgba(7,13,16,.82);color:#c8d5d2;font:10px var(--font-mono);border:1px solid rgba(159,212,209,.28); }
+    .slide-content { min-height:0; }
+    .three-pane { display:grid; grid-template-columns:1fr 1fr 1.15fr; gap:16px; min-height:0; }
+    .three-pane > * { min-width:0; min-height:0; }
+    .table-panel { min-height:0; overflow:hidden; border:1px solid var(--color-border); background:#0d171d; }
+    .table-panel h3 { padding:14px 16px 8px; margin:0; }
+    .table-scroll { height:calc(100% - 42px); overflow:auto; }
+    table { width:100%; border-collapse:collapse; font-size:11.5px; line-height:1.25; }
+    th { position:sticky; top:0; z-index:1; padding:8px 9px; text-align:left; color:var(--color-primary); background:#122129; font:600 9px var(--font-mono); letter-spacing:.08em; text-transform:uppercase; }
+    td { padding:8px 9px; vertical-align:top; border-top:1px solid #26363d; color:#c6cfcc; }
+    td:first-child { color:var(--color-bone); font-weight:600; }
+    .source-box { border-top:1px solid var(--color-border); padding-top:17px; margin-top:22px; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center; padding:2vh 2vw; background:rgba(2,6,8,.97); }
+    .lightbox.open { display:flex; }
+    .lightbox img { width:96vw; height:92vh; max-width:none; max-height:none; object-fit:contain; border:1px solid #46575c; box-shadow:0 24px 80px #000; }
+    .lightbox .close { position:fixed; top:22px; right:28px; padding:8px 12px; border:1px solid #56676a; background:#0b151a; color:#dbe3df; cursor:pointer; font:12px var(--font-mono); }
+    .lightbox .lightbox-caption { position:fixed; left:3vw; bottom:18px; color:#adbab7; font:11px var(--font-mono); }
+    .author-list { max-width:620px; color:#aeb9b6; font-size:12px; line-height:1.5; }
+    .author-list b { color:var(--color-bone); }
+    .cover-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:end; gap:60px; height:100%; }
+    .cover-rule { width:100%; max-width:520px; height:1px; background:var(--color-border); margin:32px 0 20px; }
+    .seven { display:grid; grid-template-columns:repeat(7,1fr); gap:12px; margin-top:28px; }
+    .seven div { border-top:2px solid var(--color-accent); padding-top:10px; color:var(--color-bone); font:12px var(--font-mono); }
+    .video-media video { width:100%; height:100%; object-fit:contain; background:#030607; }
+    .video-tag { position:absolute; left:16px; top:14px; z-index:2; padding:7px 9px; color:#f0aaa0; background:rgba(7,13,16,.82); border:1px solid rgba(235,9,60,.45); font:600 10px/1 var(--font-mono); letter-spacing:.12em; text-transform:uppercase; }
+    .single { display:grid; grid-template-columns:1fr; min-height:0; }
+    .single .media { min-height:0; }
+    .with-side { display:grid; grid-template-columns:1.5fr .8fr; gap:24px; min-height:0; }
+    .with-side .side { align-self:center; }
+    .pos-grid { display:grid; gap:14px; }
+    .pos-grid .measure { border-bottom:1px solid var(--color-border); }
+    @media (max-width:1100px){ .three-pane{grid-template-columns:1fr 1fr}.three-pane .table-panel{grid-column:1/-1;height:300px}.cover-grid{grid-template-columns:1fr}.seven{grid-template-columns:repeat(4,1fr)}.with-side{grid-template-columns:1fr} }
+  </style>
+</head>
+<body class="deck-shell presentation">
+  <main class="deck" id="deck" aria-label="Pterional approach teaching presentation">
+
+    <section class="slide active" data-title="Opening">
+      <div class="cover-grid">
+        <div>
+          <p class="eyebrow">UCSF Surgical Neuroanatomy Collection · resident teaching</p>
+          <div class="title-mark" aria-hidden="true"></div>
+          <h1>Pterional<br />approach</h1>
+          <p class="lede">The workhorse anterolateral craniotomy, rebuilt as a layered, spatial anatomy lab — from skin incision to dural opening.</p>
+          <div class="cover-rule"></div>
+          <div class="title-meta"><span>7 models</span><span>12 figures</span><span>4 stereoscopic videos</span><span>1 source table</span></div>
+          <p class="author-list"><b>Roberto Rodriguez Rubio · Ricky Chae · Vera Vigo · Adib A. Abla · Michael M. McDermott</b><br />Cureus 11(7): e5216 · published July 23, 2019</p>
+        </div>
+        <div>
+          <p class="question">Teaching frame</p>
+          <p class="lede" style="font-size:24px;color:var(--color-bone)">Bone → positioning → skin → fascia → muscle → craniotomy → dura</p>
+          <div class="look"><b>How to use this deck</b> Click any figure to enlarge it. Rotate each model before reading the labels. The four stereoscopic videos from the article stream from YouTube.</div>
+        </div>
+      </div>
+      <div class="footer"><span>Based on Rodriguez Rubio et al., <i>Immersive Surgical Anatomy of the Pterional Approach</i>, Cureus 2019.</span><span class="slide-number">01 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="The pterion">
+      <div><p class="eyebrow">01 · Indications — bone map</p><h2>Four bones meet<br />at the pterion.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 1 · cranial bones</span><button class="figure-button" data-full="assets/images/fig01.jpg" aria-label="Enlarge Figure 1"><img src="assets/images/fig01.jpg" alt="Cranial bones involved in the pterional approach: frontal, temporal, parietal, and sphenoid" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media figure-media"><span class="model-tag">figure 2 · cranial sutures</span><button class="figure-button" data-full="assets/images/fig02.jpg" aria-label="Enlarge Figure 2"><img src="assets/images/fig02.jpg" alt="Cranial sutures relevant to the pterion: coronal, sphenofrontal, squamosal, frontozygomatic, sphenozygomatic" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the PA is performed around the pterion — the intersection of frontal, temporal, parietal, and sphenoid bones. The temporal lines anchor the muscle map.</span><span class="slide-number">02 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Ectocranial landmarks">
+      <div><p class="eyebrow">02 · Landmarks — model 1 + VR video</p><h2>Read the surface<br />before you cut.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media video-media"><span class="video-tag">video 1 · VR 360° cranial fossae</span><iframe title="VR 360-degree stereoscopic video of the cranial fossae" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube-nocookie.com/embed/7m9V-vUWIAk"></iframe></div>
+        <div class="media"><span class="model-tag">interactive model 1 · skull landmarks</span><iframe title="Skull with ectocranial landmarks model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/b917bd1dc65e4411829d262a282807f7/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the pterion and squamous suture are the craniometric points of the PA. The VR video tours the cranial fossae lateral-to-medial — best with a Cardboard viewer.</span><span class="slide-number">03 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Skull base">
+      <div><p class="eyebrow">03 · Skull base — model 2</p><h2>Know the fossae<br />from the inside.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 2 · skull base</span><iframe title="Skull base model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/a624ecd01fe7476cb5f7b1740b6edde1/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> orient the anterior, middle, and posterior fossae before choosing the corridor — the PA serves the anterior fossa, the anterior middle fossa, and the front of the posterior fossa.</span><span class="slide-number">04 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Pterional window">
+      <div><p class="eyebrow">04 · Exposure — model 3</p><h2>One window,<br />many targets.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 3 · pterional window</span><iframe title="Pterional window model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/4186a0fd34824203b257b50c1914e3b4/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> through the SF the PA reaches the basal cistern, insula, sellar and parasellar areas, anterior circulation aneurysms, and the distal basilar territory.</span><span class="slide-number">05 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Positioning">
+      <div><p class="eyebrow">05 · Step 1 — positioning</p><h2>Positioning is<br />the first exposure.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media video-media"><span class="video-tag">video 2 · stereoscopic · head positioning</span><iframe title="3D stereoscopic video of head positioning for a pterional approach" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube-nocookie.com/embed/Ofk9WED2ajo"></iframe></div>
+        <div class="side">
+          <div class="pos-grid">
+            <div class="measure"><strong>15–20°</strong><span>head rotation away from the lesion — adjusted to the target</span></div>
+            <div class="measure"><strong>20°</strong><span>extension, making the malar eminence the highest point</span></div>
+            <div class="measure"><strong>3-pin</strong><span>fixation; contralateral pins above the STL, ipsilateral pin behind the incision or at the mastoid tip</span></div>
+            <div class="measure"><strong>↑ heart</strong><span>head elevated above heart level to promote venous return</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> gravity separates the frontal lobe — good positioning reduces the need for retractors.</span><span class="slide-number">06 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Approach in stop motion">
+      <div><p class="eyebrow">06 · Steps 2–6 — the full approach</p><h2>The whole approach,<br />in stop motion.</h2></div>
+      <div class="slide-content single">
+        <div class="media video-media"><span class="video-tag">video 3 · stereoscopic stop motion · pterional approach</span><iframe title="3D stereoscopic stop motion video depicting a pterional approach" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube-nocookie.com/embed/Mg6pYL8qztU"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Follow along:</b> skin incision from the zygomatic arch to the midline → scalp flap → interfascial and subfascial dissection → temporalis reflection → MacCarty keyhole → craniotomy → sphenoid wing drilling.</span><span class="slide-number">07 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="STA and facial nerve">
+      <div><p class="eyebrow">07 · Step 2 — danger zone</p><h2>The facial nerve<br />sets the limit.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 3 · STA and TBFN</span><button class="figure-button" data-full="assets/images/fig03.jpg" aria-label="Enlarge Figure 3"><img src="assets/images/fig03.jpg" alt="Dissection showing the course of the superficial temporal artery and temporal branches of the facial nerve" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Resident question</p>
+          <p class="lede" style="font-size:19px">Why should the incision stay within 1 cm anterior to the tragus?</p>
+          <ul class="bullets">
+            <li>The TBFN runs above the anterior two-thirds of the zygomatic arch.</li>
+            <li>The most posterior branch of the facial nerve lies ~1.5 cm anterior to the tragus.</li>
+            <li>The STA is controlled early — and serves as a landmark for the TBFN.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the TBFN is found within 1 cm of the frontal branch of the STA above the zygomatic arch.</span><span class="slide-number">08 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Soft tissue layers">
+      <div><p class="eyebrow">08 · Step 3 — layers</p><h2>Every layer<br />has a name.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 4 · soft tissue layers</span><iframe title="Soft tissue layers of the pterional approach model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/326819553a4147b4919df12bc65a65ff/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> below the STL — skin, subcutaneous tissue, galea, loose areolar tissue, suprafascial fat pad, superficial temporal fascia, interfascial fat pad, deep temporal fascia, subfascial fat pad, temporalis, periosteum. The TBFN travels in the suprafascial fat pad.</span><span class="slide-number">09 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Fat pads and nerve distances">
+      <div><p class="eyebrow">09 · Steps 3–4 — fat pads + measurements</p><h2>Measure the nerve's<br />neighborhood.</h2></div>
+      <div class="slide-content three-pane">
+        <div class="media figure-media"><span class="model-tag">figure 4 · fat pads and fascia</span><button class="figure-button" data-full="assets/images/fig04.jpg" aria-label="Enlarge Figure 4"><img src="assets/images/fig04.jpg" alt="Lateral view of head showing the suprafascial, interfascial, and subfascial fat pads, galea, deep temporal fascia, and periosteum" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="table-panel"><h3>Table 1 · distance to the middle branch of the TBFN <span style="color:var(--color-muted);font-weight:400;text-transform:none;letter-spacing:0">(adapted from Salas et al.)</span></h3><div class="table-scroll"><table><thead><tr><th>Landmark</th><th>Mean</th><th>Range</th></tr></thead><tbody>
+          <tr><td>Superolateral orbital angle</td><td>2.6 cm</td><td>1.6–3.6 cm</td></tr>
+          <tr><td>Inferolateral orbital angle</td><td>4.32 cm</td><td>2.9–5.1 cm</td></tr>
+          <tr><td>Frontozygomatic suture</td><td>3.23 cm</td><td>1.8–4.4 cm</td></tr>
+          <tr><td>Tragus</td><td>2.25 cm</td><td>1.7–3.2 cm</td></tr>
+          <tr><td>Lateral canthus</td><td>4.0 cm</td><td>3.4–4.6 cm</td></tr>
+          <tr><td>Zygomatic arch — anterior branch</td><td>3.8 cm</td><td>3.4–4.2 cm</td></tr>
+          <tr><td>Zygomatic arch — posterior branch</td><td>6.0 cm</td><td>5.6–6.4 cm</td></tr>
+        </tbody></table></div></div>
+        <div class="table-panel"><h3>Interfascial vs. subfascial</h3><div class="table-scroll"><table><thead><tr><th>Technique</th><th>Key points</th></tr></thead><tbody>
+          <tr><td>Interfascial (Yaşargil)</td><td>Superficial temporal fascia incised along the anterior STL; interfascial fat pad found ~4 cm above the lateral orbital rim; flap kept continuous with frontal pericranium.</td></tr>
+          <tr><td>Subfascial</td><td>Both fascia layers dissected from below the STL to the posterior zygomatic root; musculo-fascial cuff left along the STL; noted as safer for the TBFN.</td></tr>
+        </tbody></table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> loose areolar dissection stops at the superior edge of the suprafascial fat pad — beyond it, the plane is lost in the inferior temporal septum.</span><span class="slide-number">10 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Temporalis dissection">
+      <div><p class="eyebrow">10 · Step 4 — muscle</p><h2>Take the muscle<br />down retrograde.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 5 · Oikawa technique</span><button class="figure-button" data-full="assets/images/fig05.jpg" aria-label="Enlarge Figure 5"><img src="assets/images/fig05.jpg" alt="Oikawa technique for dissecting the temporalis muscle inferiorly to superiorly" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Resident question</p>
+          <p class="lede" style="font-size:19px">Why dissect the temporalis from inferior to superior?</p>
+          <ul class="bullets">
+            <li>Two cuts: vertical along the STL, transverse 1–2 cm below it — leaving the musculo-fascial cuff.</li>
+            <li>Retrograde elevation follows the muscle's natural plane.</li>
+            <li>Protects the deep temporal nerves and artery; minimizes postoperative atrophy.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the Oikawa technique reflects the temporalis caudally-to-rostrally over the zygomatic arch with fish hooks for maximal pericranial exposure.</span><span class="slide-number">11 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Middle meningeal artery">
+      <div><p class="eyebrow">11 · Step 5 — craniotomy planning</p><h2>The artery under<br />the pterion.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 6 · MMA course</span><button class="figure-button" data-full="assets/images/fig06.jpg" aria-label="Enlarge Figure 6"><img src="assets/images/fig06.jpg" alt="Lateral view of skull showing the course of the middle meningeal artery" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media figure-media"><span class="model-tag">figure 7 · bone flap removed</span><button class="figure-button" data-full="assets/images/fig07.jpg" aria-label="Enlarge Figure 7"><img src="assets/images/fig07.jpg" alt="Pterional bone flap removed to illustrate the anterior branch of the middle meningeal artery below the pterion" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the anterior branch of the MMA runs beneath the pterion — avoid placing a burr hole at its bifurcation, and know what to coagulate when bleeding starts.</span><span class="slide-number">12 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Windows and transillumination">
+      <div><p class="eyebrow">12 · Step 5 — bony windows</p><h2>Light shows<br />what bone hides.</h2></div>
+      <div class="slide-content split-media">
+        <div class="media figure-media"><span class="model-tag">figure 8 · transillumination</span><button class="figure-button" data-full="assets/images/fig08.jpg" aria-label="Enlarge Figure 8"><img src="assets/images/fig08.jpg" alt="Transillumination of the skull showing the course of the middle meningeal artery" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media figure-media"><span class="model-tag">figure 9 · windows by sutures</span><button class="figure-button" data-full="assets/images/fig09.jpg" aria-label="Enlarge Figure 9"><img src="assets/images/fig09.jpg" alt="Windows of the pterional approach based on cranial sutures" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the MacCarty keyhole sits on the frontosphenoid suture, 5–6 mm posterior to the three-suture junction; the squamous suture's highest point marks the inferior rolandic point.</span><span class="slide-number">13 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Dural exposure">
+      <div><p class="eyebrow">13 · Step 5 — after the bone flap</p><h2>Dura exposed,<br />fissure in view.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 5 · dural exposure</span><iframe title="Dural exposure after pterional craniotomy model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/5992d7e7933d4feaa40911202990c459/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> bone flap removal exposes the dura and the MMA's anterior branch, with the SF bordered by the inferior frontal and superior temporal gyri.</span><span class="slide-number">14 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Drilling basal structures">
+      <div><p class="eyebrow">14 · Step 6 — drilling</p><h2>Drill to the meningo-orbital<br />band — and stop.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 10 · extradural anterior clinoidectomy</span><button class="figure-button" data-full="assets/images/fig10.jpg" aria-label="Enlarge Figure 10"><img src="assets/images/fig10.jpg" alt="Schematic drawings of a right pterional approach with extradural removal of the anterior clinoid process" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Two caveats</p>
+          <ul class="bullets">
+            <li>The orbital roof is thin — fracture it and orbital fat prolapses, requiring periorbita reconstruction.</li>
+            <li>The MOB is the medial limit of sphenoid wing drilling; locate and coagulate the meningo-orbital artery before any clinoidectomy.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> detaching the MOB from the periorbita opens the middle fossa to the anterior clinoid — while protecting the cavernous sinus, optic nerve, and ICA.</span><span class="slide-number">15 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Dural opening">
+      <div><p class="eyebrow">15 · Step 7 — intradural</p><h2>Open the dura,<br />name the cistern.</h2></div>
+      <div class="slide-content with-side">
+        <div class="media figure-media"><span class="model-tag">figure 11 · after dural opening</span><button class="figure-button" data-full="assets/images/fig11.jpg" aria-label="Enlarge Figure 11"><img src="assets/images/fig11.jpg" alt="Intraoperative view after dural opening: Sylvian fissure, optic nerve, Sylvian vein, ICA, A1 and M1 segments" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="side">
+          <p class="question">Name what you see</p>
+          <ul class="bullets">
+            <li>Sylvian fissure with the Sylvian vein.</li>
+            <li>Optic nerve (II) and internal carotid artery.</li>
+            <li>Horizontal segments of the anterior (A1) and middle (M1) cerebral arteries.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> a C-shaped dural incision, convexity posterior; dural suspension prevents blood draining into the field and postoperative epidural hematoma.</span><span class="slide-number">16 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Mini-pterional">
+      <div><p class="eyebrow">16 · Modification — mini-pterional</p><h2>Same corridor,<br />smaller door.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media video-media"><span class="video-tag">video 4 · stereoscopic stop motion · mini-pterional</span><iframe title="3D stereoscopic stop motion video depicting a mini-pterional approach" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube-nocookie.com/embed/q7WIRosuNvU"></iframe></div>
+        <div class="media"><span class="model-tag">interactive model 6 · mini-pterional</span><iframe title="Mini-pterional approach model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/e842a11d049f4a58b5be7f550f134aa5/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the MPt incision runs from 1 cm above the zygomatic arch to the ipsilateral midpupillary line — optimal for unruptured MCA, ICA, and ophthalmic artery aneurysms, with less temporalis dissection.</span><span class="slide-number">17 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Two-part pterional">
+      <div><p class="eyebrow">17 · Modification — two-part craniotomy</p><h2>Two pieces,<br />preserved wing.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 12 · two-part approach, steps A–I</span><button class="figure-button" data-full="assets/images/fig12.jpg" aria-label="Enlarge Figure 12"><img src="assets/images/fig12.jpg" alt="Two-part pterional approach in nine steps, from marking to the expanded subfrontal space" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 7 · two-part pterional</span><iframe title="Two-part pterional approach model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/a16214b4683a4479aadca29aefb3bd19/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> a V-shaped craniotomy around the lateral sphenoid wing creates two bone pieces — the wing survives for reconstruction, improving cosmetic results.</span><span class="slide-number">18 / 19</span></div>
+    </section>
+
+    <section class="slide" data-title="Article source">
+      <div><p class="eyebrow">18 · Source</p><h2>Article source</h2></div>
+      <div class="slide-content" style="display:flex;align-items:center;justify-content:center">
+        <div class="media figure-media" style="width:min(880px,90vw);height:430px"><span class="model-tag">article source</span><div style="padding:48px;display:flex;flex-direction:column;justify-content:center;height:100%"><p class="eyebrow">Rodriguez Rubio et al. · Cureus 2019</p><h3 style="font:400 42px/1.08 var(--font-display);color:var(--color-bone);margin-bottom:26px">Immersive Surgical Anatomy of the Pterional Approach</h3><div class="source-box small"><a href="https://www.cureus.com/articles/21245-immersive-surgical-anatomy-of-the-pterional-approach" target="_blank" rel="noopener">Open the article ↗</a><br /><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6759424/" target="_blank" rel="noopener">Open full-text media ↗</a><br /><a href="https://sketchfab.com/SBCVL_UCSF" target="_blank" rel="noopener">SBCVL_UCSF on Sketchfab ↗</a></div></div></div>
+      </div>
+      <div class="footer"><span>Primary article and open-access media source. The stereoscopic videos from the article stream from YouTube.</span><span class="slide-number">19 / 19</span></div>
+    </section>
+  </main>
+
+  <nav class="nav" id="nav" aria-label="Slide navigation"></nav>
+  <div class="controls" aria-label="Presentation controls"><a href="../../index.html" style="padding:8px 11px;border:1px solid var(--color-border);background:rgba(10,16,21,.82);color:#b8c4c1;font:11px var(--font-mono);text-decoration:none">← collection</a><button id="prev" type="button">← previous</button><button id="next" type="button">next →</button><button id="fullscreen" type="button">fullscreen</button></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure"><button class="close" id="closeLightbox" type="button">close ×</button><img id="lightboxImage" alt="" /><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.slide')];
+      const nav = document.getElementById('nav');
+      let index = 0;
+      slides.forEach((slide, i) => { const b=document.createElement('button'); b.type='button'; b.textContent=String(i+1).padStart(2,'0'); b.title=slide.dataset.title||`Slide ${i+1}`; b.addEventListener('click',()=>show(i)); nav.appendChild(b); });
+      const buttons=[...nav.querySelectorAll('button')];
+      function show(i){
+        index=Math.max(0,Math.min(slides.length-1,i));
+        slides.forEach((s,n)=>{
+          s.classList.toggle('active',n===index);
+          if(n!==index){ s.querySelectorAll('video').forEach(v=>{ if(!v.paused) v.pause(); }); }
+        });
+        buttons.forEach((b,n)=>b.classList.toggle('active',n===index));
+        slides[index].querySelectorAll('iframe[data-src]').forEach(frame=>{frame.src=frame.dataset.src; frame.removeAttribute('data-src');});
+        history.replaceState(null,'',`#${index+1}`);
+      }
+      document.getElementById('prev').addEventListener('click',()=>show(index-1)); document.getElementById('next').addEventListener('click',()=>show(index+1)); document.getElementById('fullscreen').addEventListener('click',()=>document.documentElement.requestFullscreen?.());
+      document.addEventListener('keydown',e=>{ if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1);} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1);} if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1); if(e.key==='Escape')closeBox(); });
+      const box=document.getElementById('lightbox'), image=document.getElementById('lightboxImage'), caption=document.getElementById('lightboxCaption');
+      function openBox(button){ image.src=button.dataset.full; image.alt=button.querySelector('img')?.alt||''; caption.textContent=image.alt+' · click outside or press Escape to close'; box.classList.add('open'); document.getElementById('closeLightbox').focus(); }
+      function closeBox(){ box.classList.remove('open'); image.src=''; }
+      document.querySelectorAll('.figure-button').forEach(b=>{b.addEventListener('click',()=>openBox(b)); b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox(b);}});});
+      document.getElementById('closeLightbox').addEventListener('click',closeBox); box.addEventListener('click',e=>{if(e.target===box)closeBox();});
+      const requested=Number(location.hash.slice(1)); if(requested>=1&&requested<=slides.length)index=requested-1; show(index);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UCSF Surgical Neuroanatomy Collection — Immersive Articles</title>
+<meta name="description" content="Online presentations of the UCSF Surgical Neuroanatomy Collection: interactive 3D models, figures, and tables from published immersive surgical anatomy articles." />
+<style>
+  :root{
+    --navy:#052049; --navy-2:#07182f; --surface:#0a2547;
+    --teal:#058488; --teal-soft:#4fb3b5; --red:#eb093c;
+    --bone:#f2f3f4; --muted:#9ba6b6; --line:#22406b;
+    --serif:"Granjon",Garamond,Georgia,serif;
+    --sans:"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--navy);color:var(--bone);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--teal-soft);text-decoration:none}
+  a:hover{color:var(--bone)}
+  ::selection{background:var(--teal);color:#fff}
+
+  /* ---------- top bar ---------- */
+  .bar{position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;justify-content:space-between;
+    padding:0 clamp(20px,4vw,56px);height:64px;
+    background:rgba(5,32,73,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(34,64,107,.6)}
+  .bar .wordmark{font:600 12px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--bone)}
+  .bar .wordmark span{display:block;font-weight:400;letter-spacing:.14em;color:var(--muted);font-size:10px;margin-top:3px}
+  .bar nav{display:flex;gap:26px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+  .bar nav a{color:var(--muted)}
+  .bar nav a:hover{color:var(--bone)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+  #contours{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,32,73,.25),rgba(5,32,73,0) 35%,rgba(5,32,73,.92) 88%);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;width:100%;padding:0 clamp(20px,4vw,56px) clamp(48px,7vh,88px)}
+  .eyebrow{margin:0 0 22px;color:var(--teal-soft);font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+  h1{margin:0;max-width:1100px;font:400 clamp(46px,7.2vw,118px)/1.0 var(--serif);letter-spacing:-.02em;color:var(--bone)}
+  h1 em{font-style:italic;color:var(--teal-soft)}
+  .hero-sub{margin:26px 0 0;max-width:560px;color:var(--muted);font-size:16px;line-height:1.65}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:0;margin-top:44px;border-top:1px solid var(--line)}
+  .hero-meta div{padding:18px 34px 0 0;margin-right:34px;border-right:1px solid var(--line)}
+  .hero-meta div:last-child{border-right:0}
+  .hero-meta b{display:block;font:400 34px/1 var(--serif);color:var(--bone)}
+  .hero-meta span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .scroll-hint{position:absolute;right:clamp(20px,4vw,56px);bottom:clamp(48px,7vh,88px);z-index:2;
+    writing-mode:vertical-rl;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:14px}
+  .scroll-hint::after{content:"";width:1px;height:56px;background:linear-gradient(var(--teal),transparent);animation:drip 2.6s ease-in-out infinite}
+  @keyframes drip{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* ---------- collection index ---------- */
+  .section{padding:clamp(64px,10vh,120px) clamp(20px,4vw,56px)}
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:14px}
+  h2{margin:0;font:400 clamp(30px,3.4vw,52px)/1.05 var(--serif);letter-spacing:-.015em}
+  .section-head span{color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .section-rule{height:1px;background:var(--line);margin-bottom:0}
+
+  .article{display:grid;grid-template-columns:88px minmax(0,1.05fr) minmax(0,1.35fr);gap:clamp(20px,3.5vw,56px);
+    padding:clamp(36px,5vh,64px) 0;border-bottom:1px solid var(--line);align-items:start}
+  .article .num{font:400 clamp(30px,3vw,44px)/1 var(--serif);color:var(--teal);padding-top:6px}
+  .thumb{position:relative;display:block;overflow:hidden;border:1px solid var(--line);background:var(--navy-2);aspect-ratio:16/9}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:transform .8s cubic-bezier(.2,.6,.2,1),opacity .4s}
+  .thumb::after{content:"Open presentation";position:absolute;inset:auto 0 0;padding:12px 14px;
+    font:600 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--bone);
+    background:linear-gradient(transparent,rgba(5,32,73,.95));opacity:0;transform:translateY(6px);transition:.35s}
+  .article:hover .thumb img{transform:scale(1.045);opacity:1}
+  .article:hover .thumb::after{opacity:1;transform:none}
+  .a-body .journal{margin:0 0 12px;color:var(--teal-soft);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  .a-title{margin:0 0 14px;font:400 clamp(26px,2.6vw,40px)/1.12 var(--serif);letter-spacing:-.01em}
+  .a-title a{color:var(--bone)}
+  .a-title a:hover{color:var(--teal-soft)}
+  .a-authors{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.55;max-width:640px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+  .chips span{padding:6px 11px;border:1px solid var(--line);color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .chips span b{color:var(--bone);font-weight:600}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border:1px solid var(--teal);
+    color:var(--bone);font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;transition:.25s;background:transparent}
+  .btn:hover{background:var(--teal);color:#fff}
+  .btn.primary{background:var(--teal);color:#fff}
+  .btn.primary:hover{background:#067275;border-color:#067275}
+  .btn .arr{transition:transform .25s}
+  .btn:hover .arr{transform:translateX(4px)}
+  .ext{font-size:12px;letter-spacing:.06em}
+
+  .empty{padding:56px 0;color:var(--muted);font-size:14px;border-bottom:1px solid var(--line)}
+
+  /* ---------- categories ---------- */
+  .category{margin-top:clamp(52px,8vh,96px)}
+  .category:first-of-type{margin-top:0}
+  .cat-head{display:flex;align-items:baseline;gap:clamp(16px,2.6vw,36px);margin-bottom:10px}
+  .cat-num{font:400 clamp(38px,4.4vw,64px)/1 var(--serif);color:var(--teal)}
+  .cat-head h3{margin:0;font:400 clamp(26px,2.8vw,42px)/1.05 var(--serif);letter-spacing:-.01em;color:var(--bone)}
+  .cat-sub{margin-left:auto;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+  .cat-rule{height:1px;background:var(--line)}
+  .category .article:last-child{border-bottom:0}
+
+  /* ---------- about / footer ---------- */
+  .about{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,4vw,72px)}
+  .about p{margin:0;color:var(--muted);font-size:15px;line-height:1.7;max-width:62ch}
+  .about p+p{margin-top:16px}
+  .about .links{display:grid;gap:2px;align-content:start}
+  .about .links a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border-bottom:1px solid var(--line);
+    color:var(--bone);font-size:13px;letter-spacing:.06em;transition:.2s}
+  .about .links a span{color:var(--muted);font-size:11px}
+  .about .links a:hover{padding-left:10px;color:var(--teal-soft)}
+  footer{border-top:1px solid var(--line);padding:28px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:14px;
+    justify-content:space-between;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    .article{grid-template-columns:1fr;gap:18px}
+    .article .num{padding-top:0}
+    .about{grid-template-columns:1fr}
+    .scroll-hint{display:none}
+    .bar nav{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wordmark">UCSF Surgical Neuroanatomy<span>Immersive article collection</span></div>
+  <nav>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="https://www.cureus.com/channels/sbcvl" target="_blank" rel="noopener">Cureus channel ↗</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <canvas id="contours" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="eyebrow">UCSF · Surgical Neuroanatomy Collection</p>
+    <h1>Surgical anatomy,<br />in <em>three dimensions.</em></h1>
+    <p class="hero-sub">Published immersive articles converted into online presentations — interactive 3D models first, then figures and tables, with only the text that matters.</p>
+    <div class="hero-meta" id="heroMeta"></div>
+  </div>
+  <div class="scroll-hint">Collection</div>
+</section>
+
+<main>
+  <section class="section" id="collection">
+    <div class="section-head reveal">
+      <h2>The collection</h2>
+      <span id="articleCount"></span>
+    </div>
+    <div class="section-rule"></div>
+    <div id="articles"></div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="about reveal">
+      <div>
+        <h2 style="margin-bottom:22px">About this library</h2>
+        <p>Each entry takes a peer-reviewed article from the UCSF Surgical Neuroanatomy Collection and rebuilds it as a browser-based slide deck: the Sketchfab 3D models are the main assets, supported by the article's figures and source tables. Click any figure in a deck to inspect it full-screen; navigate with the arrow keys.</p>
+        <p>The decks are plain HTML — they open in any modern browser on any computer. Embedded 3D models stream from Sketchfab, so an internet connection is needed for the interactive models.</p>
+      </div>
+      <div class="links">
+        <a href="https://www.cureus.com/channels/sbcvl" target="_blank" rel="noopener">UCSF Surgical Neuroanatomy Collection <span>Cureus ↗</span></a>
+        <a href="https://identity.ucsf.edu/" target="_blank" rel="noopener">UCSF Brand Identity <span>identity.ucsf.edu ↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>UCSF Surgical Neuroanatomy Collection</span>
+  <span>Models via Sketchfab · Figures © their article authors</span>
+</footer>
+
+<script>
+/* ============================================================
+   COLLECTION DATA — add a new object here for each new article.
+   `category` must match a slug in CATEGORIES below.
+   ============================================================ */
+const CATEGORIES = [
+  { slug: "cranial-anatomy", number: "01", title: "Cranial Anatomy",
+    blurb: "Surface landmarks, sutures, and craniometric points" },
+  { slug: "anterolateral-approaches", number: "02", title: "Anterolateral Approaches",
+    blurb: "Pterional and frontotemporal-orbitozygomatic corridors" },
+  { slug: "posterolateral-approaches", number: "03", title: "Posterolateral Approaches",
+    blurb: "Retrosigmoid and far-lateral corridors to the posterior fossa" },
+  { slug: "spine-anatomy", number: "04", title: "Spine Anatomy",
+    blurb: "The craniocervical junction" },
+  { slug: "vascular-anatomy", number: "05", title: "Vascular Anatomy",
+    blurb: "Venous drainage, meningeal supply, and dural fistulas" }
+];
+
+const ARTICLES = [
+  {
+    slug: "craniocervical-junction",
+    category: "spine-anatomy",
+    title: "Immersive Surgical Anatomy of the Craniocervical Junction",
+    journal: "Cureus 12(9): e10364 · Sep 10, 2020",
+    authors: "Vigo V, Hirpara A, Yassin M, Wang M, Chou D, De Bonis P, Abla A, Rodriguez Rubio R.",
+    thumbnail: "articles/craniocervical-junction/assets/images/full-fig01-occipital.png",
+    deck: "articles/craniocervical-junction/index.html",
+    extras: [
+      { label: "10-minute chalk talk", url: "articles/craniocervical-junction/chalk-talk.html" },
+      { label: "Resident case quiz", url: "articles/craniocervical-junction/quiz.html" }
+    ],
+    assets: { models: 7, figures: 7, tables: 2, videos: 0 },
+    source: "https://www.cureus.com/articles/40530-immersive-surgical-anatomy-of-the-craniocervical-junction"
+  },
+  {
+    slug: "pterional-approach",
+    category: "anterolateral-approaches",
+    title: "Immersive Surgical Anatomy of the Pterional Approach",
+    journal: "Cureus 11(7): e5216 · Jul 23, 2019",
+    authors: "Rodriguez Rubio R, Chae R, Vigo V, Abla AA, McDermott MM.",
+    thumbnail: "articles/pterional-approach/assets/images/fig03.jpg",
+    deck: "articles/pterional-approach/index.html",
+    extras: [],
+    assets: { models: 7, figures: 12, tables: 1, videos: 4 },
+    source: "https://www.cureus.com/articles/21245-immersive-surgical-anatomy-of-the-pterional-approach"
+  },
+  {
+    slug: "frontotemporal-orbitozygomatic-approach",
+    category: "anterolateral-approaches",
+    number: "03",
+    title: "Immersive Surgical Anatomy of the Frontotemporal-Orbitozygomatic Approach",
+    journal: "Cureus 11(11): e6053 · Nov 2, 2019",
+    authors: "Rodriguez Rubio R, Chae R, Kournoutas I, Abla A, McDermott M.",
+    thumbnail: "articles/frontotemporal-orbitozygomatic-approach/assets/images/fig-i05.jpg",
+    deck: "articles/frontotemporal-orbitozygomatic-approach/index.html",
+    extras: [],
+    assets: { models: 8, figures: 8, tables: 0, videos: 4 },
+    source: "https://www.cureus.com/articles/23943-immersive-surgical-anatomy-of-the-frontotemporal-orbitozygomatic-approach"
+  },
+  {
+    slug: "craniometric-points",
+    category: "cranial-anatomy",
+    number: "04",
+    title: "Immersive Surgical Anatomy of the Craniometric Points",
+    journal: "Cureus 12(6): e8643 · Jun 15, 2020",
+    authors: "Vigo V, Cornejo K, Nunez L, Abla A, Rodriguez Rubio R.",
+    thumbnail: "articles/craniometric-points/assets/images/fig-i02.jpg",
+    deck: "articles/craniometric-points/index.html",
+    extras: [],
+    assets: { models: 9, figures: 11, tables: 0, videos: 0 },
+    source: "https://www.cureus.com/articles/31561-immersive-surgical-anatomy-of-the-craniometric-points"
+  },
+  {
+    slug: "retrosigmoid-approach",
+    category: "posterolateral-approaches",
+    number: "05",
+    title: "Immersive Surgical Anatomy of the Retrosigmoid Approach",
+    journal: "Cureus 13(6): e16068 · Jun 30, 2021",
+    authors: "Rodriguez Rubio R, Xie W, Vigo V, Lee A, Tomasi SO, El-Sayed IH, Abla A.",
+    thumbnail: "articles/retrosigmoid-approach/assets/images/fig-i05.jpg",
+    deck: "articles/retrosigmoid-approach/index.html",
+    extras: [],
+    assets: { models: 8, figures: 10, tables: 0, videos: 0 },
+    source: "https://www.cureus.com/articles/61558-immersive-surgical-anatomy-of-the-retrosigmoid-approach"
+  },
+  {
+    slug: "far-lateral-approach",
+    category: "posterolateral-approaches",
+    number: "06",
+    title: "Immersive Surgical Anatomy of the Far-Lateral Approach",
+    journal: "Cureus 14(11): e31257 · Nov 8, 2022",
+    authors: "Payman A, Rios Zermeno J, Hirpara A, El-Sayed IH, Abla A, Rodriguez Rubio R.",
+    thumbnail: "articles/far-lateral-approach/assets/images/fig-i05.jpg",
+    deck: "articles/far-lateral-approach/index.html",
+    extras: [],
+    assets: { models: 7, figures: 11, tables: 2, videos: 0 },
+    source: "https://www.cureus.com/articles/121151-immersive-surgical-anatomy-of-the-far-lateral-approach"
+  },
+  {
+    slug: "venous-drainage-posterior-fossa-davfs",
+    category: "vascular-anatomy",
+    title: "Immersive Surgical Anatomy of the Venous Drainage and Meningeal Supply of the Posterior Fossa: dAVFs",
+    journal: "Cureus 16(7): e64532 · Jul 14, 2024",
+    authors: "Payman A, Rios Zermeno J, Bartoletti V, Norri N, Abla AA, Rodriguez Rubio R.",
+    thumbnail: "articles/venous-drainage-posterior-fossa-davfs/assets/images/fig-i02.jpg",
+    deck: "articles/venous-drainage-posterior-fossa-davfs/index.html",
+    extras: [],
+    assets: { models: 4, figures: 6, tables: 1, videos: 0 },
+    source: "https://www.cureus.com/articles/271023-immersive-surgical-anatomy-of-the-venous-drainage-and-meningeal-supply-of-the-posterior-fossa-anatomical-nuances-and-microsurgical-management-of-dural-arteriovenous-fistulas-davfs"
+  }
+];
+
+/* ---------- render ---------- */
+const $ = s => document.querySelector(s);
+
+function renderArticles(){
+  const wrap = $("#articles");
+  if(!ARTICLES.length){
+    wrap.innerHTML = '<div class="empty">No articles published yet.</div>';
+    return;
+  }
+  const articleCard = (a, num) => `
+    <article class="article reveal">
+      <div class="num">${num}</div>
+      <a class="thumb" href="${a.deck}" aria-label="Open presentation: ${a.title}">
+        <img src="${a.thumbnail}" alt="Key figure — ${a.title}" loading="lazy" />
+      </a>
+      <div class="a-body">
+        <p class="journal">${a.journal}</p>
+        <h3 class="a-title"><a href="${a.deck}">${a.title}</a></h3>
+        <p class="a-authors">${a.authors}</p>
+        <div class="chips">
+          <span><b>${a.assets.models}</b>&nbsp;3D models</span>
+          <span><b>${a.assets.figures}</b>&nbsp;figures</span>
+          <span><b>${a.assets.tables}</b>&nbsp;${a.assets.tables===1?"table":"tables"}</span>
+          ${a.assets.videos ? `<span><b>${a.assets.videos}</b>&nbsp;videos</span>` : ""}
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="${a.deck}">Open presentation <span class="arr">→</span></a>
+          ${a.extras.map(e => `<a class="btn" href="${e.url}">${e.label}</a>`).join("")}
+          <a class="ext" href="${a.source}" target="_blank" rel="noopener">Read on Cureus ↗</a>
+        </div>
+      </div>
+    </article>`;
+  wrap.innerHTML = CATEGORIES.map(cat => {
+    const items = ARTICLES.filter(a => a.category === cat.slug);
+    if(!items.length) return "";
+    return `
+    <section class="category" id="${cat.slug}">
+      <div class="cat-head reveal">
+        <span class="cat-num">${cat.number}</span>
+        <h3>${cat.title}</h3>
+        <span class="cat-sub">${cat.blurb} · ${items.length} ${items.length===1?"article":"articles"}</span>
+      </div>
+      <div class="cat-rule"></div>
+      ${items.map((a,i) => articleCard(a, String(i+1).padStart(2,"0"))).join("")}
+    </section>`;
+  }).join("");
+}
+
+function renderMeta(){
+  const t = ARTICLES.reduce((acc,a)=>({
+    models: acc.models + a.assets.models,
+    figures: acc.figures + a.assets.figures,
+    tables: acc.tables + a.assets.tables,
+    videos: acc.videos + (a.assets.videos||0)
+  }), {models:0, figures:0, tables:0, videos:0});
+  $("#heroMeta").innerHTML = `
+    <div><b>${ARTICLES.length}</b><span>${ARTICLES.length===1?"article":"articles"}</span></div>
+    <div><b>${CATEGORIES.length}</b><span>sections</span></div>
+    <div><b>${t.models}</b><span>3D models</span></div>
+    <div><b>${t.figures}</b><span>figures</span></div>
+    <div><b>${t.videos}</b><span>videos</span></div>`;
+  $("#articleCount").textContent = `${ARTICLES.length} ${ARTICLES.length===1?"entry":"entries"}`;
+}
+
+renderArticles();
+renderMeta();
+
+/* ---------- scroll reveal ---------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* ---------- ambient contour field ---------- */
+(() => {
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cv = document.getElementById("contours");
+  const ctx = cv.getContext("2d");
+  let w, h, t = 0, raf;
+
+  function resize(){
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = w * dpr; cv.height = h * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+
+  function field(x, y, t){
+    return Math.sin(x*0.011 + t*0.35) * 14
+         + Math.sin(x*0.021 - t*0.22 + y*0.006) * 9
+         + Math.sin((x+y)*0.007 + t*0.15) * 12;
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    const rows = 9, step = 7;
+    for(let r=0; r<rows; r++){
+      const baseY = (h/(rows-1)) * r;
+      const alpha = 0.05 + 0.10 * Math.abs(Math.sin(r*1.3 + t*0.4));
+      ctx.beginPath();
+      for(let x=0; x<=w; x+=step){
+        const y = baseY + field(x, baseY, t);
+        x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+      }
+      ctx.strokeStyle = `rgba(79,179,181,${alpha.toFixed(3)})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    /* one accent line, kept very quiet */
+    ctx.beginPath();
+    for(let x=0; x<=w; x+=step){
+      const y = h*0.62 + field(x, h*0.62, t*1.2) * 0.8;
+      x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = "rgba(5,132,136,0.35)";
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+  }
+
+  function loop(){ t += 0.008; draw(); raf = requestAnimationFrame(loop); }
+
+  resize();
+  addEventListener("resize", () => { resize(); if(reduced) draw(); });
+  if(reduced){ draw(); } else { loop(); }
+  document.addEventListener("visibilitychange", () => {
+    if(reduced) return;
+    if(document.hidden) cancelAnimationFrame(raf); else loop();
+  });
+})();
+</script>
+</body>
+</html>
