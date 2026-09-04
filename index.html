@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>UCSF Surgical Neuroanatomy Collection — Immersive Articles</title>
 <meta name="description" content="Online presentations of the UCSF Surgical Neuroanatomy Collection: interactive 3D models, figures, and tables from published immersive surgical anatomy articles." />
+<meta name="theme-color" content="#052049" />
+<link rel="preconnect" href="https://assets.cureus.com" crossorigin />
+<link rel="preload" as="image" href="https://assets.cureus.com/uploads/channel/hero/72/channel_hero_webp_1562006938-Channel_hero_image.PNG" fetchpriority="high" />
+<script>document.documentElement.classList.add("js");</script>
 <style>
   :root{
     --navy:#052049; --navy-2:#07182f; --surface:#0a2547;
@@ -15,6 +19,10 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  :focus{outline:none}
+  :where(a,button):focus-visible{outline:3px solid var(--teal-soft);outline-offset:4px}
+  .skip-link{position:fixed;left:20px;top:12px;z-index:100;padding:12px 16px;background:var(--bone);color:var(--navy);font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;transform:translateY(-150%);transition:transform .2s}
+  .skip-link:focus{transform:none}
   body{margin:0;background:var(--navy);color:var(--bone);font-family:var(--sans);-webkit-font-smoothing:antialiased}
   a{color:var(--teal-soft);text-decoration:none}
   a:hover{color:var(--bone)}
@@ -24,17 +32,28 @@
   .bar{position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;justify-content:space-between;
     padding:0 clamp(20px,4vw,56px);height:64px;
     background:rgba(5,32,73,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(34,64,107,.6)}
-  .bar .wordmark{font:600 12px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--bone)}
+  .brand-lockup{display:flex;align-items:center;gap:12px;color:inherit}
+  .lab-logo{width:38px;height:38px;display:block;object-fit:cover;border:1px solid rgba(79,179,181,.55);background:#000}
+  .bar .wordmark{display:block;font:600 12px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--bone)}
+  .bar .wordmark:hover{color:var(--teal-soft)}
   .bar .wordmark span{display:block;font-weight:400;letter-spacing:.14em;color:var(--muted);font-size:10px;margin-top:3px}
   .bar nav{display:flex;gap:26px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
   .bar nav a{color:var(--muted)}
   .bar nav a:hover{color:var(--bone)}
+  .menu-toggle{display:none;min-height:44px;padding:10px 14px;border:1px solid var(--teal);background:transparent;color:var(--bone);font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
 
   /* ---------- hero ---------- */
-  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero{position:relative;min-height:clamp(720px,92vh,980px);display:flex;align-items:flex-end;overflow:hidden}
   #contours{position:absolute;inset:0;width:100%;height:100%;display:block}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,32,73,.25),rgba(5,32,73,0) 35%,rgba(5,32,73,.92) 88%);pointer-events:none}
-  .hero-inner{position:relative;z-index:2;width:100%;padding:0 clamp(20px,4vw,56px) clamp(48px,7vh,88px)}
+  .hero-inner{position:relative;z-index:3;width:100%;max-width:1760px;margin:0 auto;padding:0 clamp(20px,4vw,56px) clamp(48px,7vh,88px);padding-right:clamp(280px,34vw,620px)}
+  .hero-media{position:absolute;z-index:1;right:clamp(20px,6vw,110px);bottom:clamp(72px,9vh,128px);width:min(40vw,640px);max-height:72vh;overflow:hidden;border:1px solid rgba(79,179,181,.48);background:var(--bone);box-shadow:0 26px 80px rgba(0,0,0,.28)}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,32,73,.12),transparent 34%,rgba(5,32,73,.04)),linear-gradient(0deg,rgba(5,32,73,.18),transparent 34%);pointer-events:none}
+  .hero-media img{display:block;width:100%;height:auto;max-height:72vh;object-fit:cover;object-position:center;filter:saturate(.9) contrast(1.04)}
+  .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:30px}
+  .hero-actions .btn{min-height:46px}
+  .hero-link{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-soft)}
+  .hero-link:hover{color:var(--bone)}
   .eyebrow{margin:0 0 22px;color:var(--teal-soft);font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase}
   h1{margin:0;max-width:1100px;font:400 clamp(46px,7.2vw,118px)/1.0 var(--serif);letter-spacing:-.02em;color:var(--bone)}
   h1 em{font-style:italic;color:var(--teal-soft)}
@@ -51,7 +70,7 @@
   @keyframes drip{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
 
   /* ---------- collection index ---------- */
-  .section{padding:clamp(64px,10vh,120px) clamp(20px,4vw,56px)}
+  .section{width:100%;max-width:1872px;margin-inline:auto;padding:clamp(64px,10vh,120px) clamp(20px,4vw,56px)}
   .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:14px}
   h2{margin:0;font:400 clamp(30px,3.4vw,52px)/1.05 var(--serif);letter-spacing:-.015em}
   .section-head span{color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
@@ -76,7 +95,7 @@
   .chips span{padding:6px 11px;border:1px solid var(--line);color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
   .chips span b{color:var(--bone);font-weight:600}
   .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border:1px solid var(--teal);
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:12px 20px;border:1px solid var(--teal);
     color:var(--bone);font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;transition:.25s;background:transparent}
   .btn:hover{background:var(--teal);color:#fff}
   .btn.primary{background:var(--teal);color:#fff}
@@ -99,6 +118,7 @@
 
   /* ---------- about / footer ---------- */
   .about{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,4vw,72px)}
+  .about h2{margin:0 0 22px}
   .about p{margin:0;color:var(--muted);font-size:15px;line-height:1.7;max-width:62ch}
   .about p+p{margin-top:16px}
   .about .links{display:grid;gap:2px;align-content:start}
@@ -110,15 +130,52 @@
     justify-content:space-between;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 
   /* ---------- reveal ---------- */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+  .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @supports not ((backdrop-filter:blur(1px))){.bar{background:var(--navy)}}
   .reveal.in{opacity:1;transform:none}
 
+  @media (max-width:1100px) and (min-width:901px){
+    .article{grid-template-columns:64px minmax(0,1fr);gap:24px}
+    .article .thumb{grid-column:2;grid-row:1}
+    .article .a-body{grid-column:2;grid-row:2}
+    .cat-sub{white-space:normal;text-align:right}
+  }
   @media (max-width:900px){
+    .bar{height:60px;padding-inline:20px}
+    .brand-lockup{gap:9px}
+    .lab-logo{width:32px;height:32px}
+    .bar .wordmark{font-size:10px;letter-spacing:.16em}
+    .bar .wordmark span{font-size:8px;letter-spacing:.1em}
+    .menu-toggle{display:inline-flex;align-items:center}
+    .bar nav{display:none;position:absolute;top:calc(100% + 10px);right:20px;min-width:210px;padding:8px;background:rgba(5,32,73,.98);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.3)}
+    .bar nav.open{display:grid;gap:0}
+    .bar nav a{display:block;padding:14px 12px;min-height:44px}
+    .hero{min-height:760px;align-items:flex-end}
+    .hero-media{top:76px;right:20px;bottom:auto;width:calc(100% - 40px);max-height:42vh;opacity:.56;box-shadow:none}
+    .hero-media img{max-height:42vh;object-fit:cover;object-position:center 38%}
+    .hero::after{background:linear-gradient(to bottom,rgba(5,32,73,.18),rgba(5,32,73,.58) 40%,rgba(5,32,73,.98) 76%)}
+    .hero-inner{padding:0 20px 48px}
+    h1{font-size:clamp(44px,12vw,72px)}
+    .hero-sub{font-size:15px;line-height:1.55}
+    .hero-actions{gap:14px;margin-top:24px}
+    .hero-actions .btn{width:100%}
+    .hero-link{padding:8px 0}
     .article{grid-template-columns:1fr;gap:18px}
     .article .num{padding-top:0}
     .about{grid-template-columns:1fr}
     .scroll-hint{display:none}
-    .bar nav{display:none}
+    .cat-head{align-items:flex-start;flex-wrap:wrap}
+    .cat-sub{width:100%;margin-left:calc(clamp(38px,4.4vw,64px) + clamp(16px,2.6vw,36px));white-space:normal}
+    .chips span{min-height:32px;display:inline-flex;align-items:center}
+  }
+  @media (max-width:900px) and (prefers-reduced-data:reduce){
+    .hero-media{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
@@ -127,22 +184,37 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#collection">Skip to collection</a>
 
 <header class="bar">
-  <div class="wordmark">UCSF Surgical Neuroanatomy<span>Immersive article collection</span></div>
-  <nav>
+  <a class="brand-lockup" href="#top" aria-label="UCSF Surgical Neuroanatomy Collection home">
+    <img class="lab-logo" src="https://assets.cureus.com/uploads/channel/logo/72/1562007282-Logo_image-_sbcvl_VERT.jpg" alt="" width="38" height="38" decoding="async" />
+    <span class="wordmark">UCSF Surgical Neuroanatomy<span>Immersive article collection</span></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav id="primary-nav" aria-label="Primary navigation">
     <a href="#collection">Collection</a>
     <a href="#about">About</a>
     <a href="https://www.cureus.com/channels/sbcvl" target="_blank" rel="noopener">Cureus channel ↗</a>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
   <canvas id="contours" aria-hidden="true"></canvas>
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width: 900px)" srcset="https://assets.cureus.com/uploads/channel/hero/72/channel_hero_webp_1562006938-Channel_hero_image.PNG" />
+      <img src="https://assets.cureus.com/uploads/channel/hero/72/channel_hero_webp_1562006938-Channel_hero_image.PNG" alt="Sequential specimen-based views of the brain from the UCSF Surgical Neuroanatomy Collection" width="1200" height="1000" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
+  </div>
   <div class="hero-inner">
     <p class="eyebrow">UCSF · Surgical Neuroanatomy Collection</p>
-    <h1>Surgical anatomy,<br />in <em>three dimensions.</em></h1>
+    <h1>Surgical neuroanatomy,<br />in <em>three dimensions.</em></h1>
     <p class="hero-sub">Published immersive articles converted into online presentations — interactive 3D models first, then figures and tables, with only the text that matters.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#collection">Explore the collection <span class="arr">→</span></a>
+      <a class="hero-link" href="#about">About the library</a>
+    </div>
     <div class="hero-meta" id="heroMeta"></div>
   </div>
   <div class="scroll-hint">Collection</div>
@@ -160,14 +232,20 @@
 
   <section class="section" id="about">
     <div class="about reveal">
-      <div>
-        <h2 style="margin-bottom:22px">About this library</h2>
+      <div class="about-copy">
+        <h2>About this library</h2>
         <p>Each entry takes a peer-reviewed article from the UCSF Surgical Neuroanatomy Collection and rebuilds it as a browser-based slide deck: the Sketchfab 3D models are the main assets, supported by the article's figures and source tables. Click any figure in a deck to inspect it full-screen; navigate with the arrow keys.</p>
         <p>The decks are plain HTML — they open in any modern browser on any computer. Embedded 3D models stream from Sketchfab, so an internet connection is needed for the interactive models.</p>
       </div>
-      <div class="links">
-        <a href="https://www.cureus.com/channels/sbcvl" target="_blank" rel="noopener">UCSF Surgical Neuroanatomy Collection <span>Cureus ↗</span></a>
-        <a href="https://identity.ucsf.edu/" target="_blank" rel="noopener">UCSF Brand Identity <span>identity.ucsf.edu ↗</span></a>
+      <div class="about-copy">
+        <h2>About the lab</h2>
+        <p>The UCSF Skull Base &amp; Cerebrovascular laboratory is staffed by world-renowned neurosurgeons and otolaryngologists in the fields of skull base, neuro-oncology, and cerebrovascular surgery. Every year, we welcome talented research fellows who, with their work and commitment, are the heartbeat of the laboratory's daily function.</p>
+        <p>Under the guidance of director Dr. Roberto Rodriguez Rubio, MD, the Skull Base lab has trained dozens of such researchers, from international surgeons and UCSF residents to medical students and undergraduates.</p>
+        <p>Since its conception in 2012, the laboratory has produced numerous publications in the most prestigious journals in our field, some of which have redesigned the surgical treatment and approach for specific lesions and provided a sound scientific basis for optimal practices in operative neurosurgery and otolaryngology.</p>
+        <div class="links">
+          <a href="https://skullbaselab.ucsf.edu/" target="_blank" rel="noopener">Visit the Skull Base Lab <span>skullbaselab.ucsf.edu ↗</span></a>
+          <a href="https://www.cureus.com/channels/sbcvl" target="_blank" rel="noopener">UCSF Surgical Neuroanatomy Collection <span>Cureus ↗</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -303,7 +381,7 @@ function renderArticles(){
     <article class="article reveal">
       <div class="num">${num}</div>
       <a class="thumb" href="${a.deck}" aria-label="Open presentation: ${a.title}">
-        <img src="${a.thumbnail}" alt="Key figure — ${a.title}" loading="lazy" />
+        <img src="${a.thumbnail}" alt="Key figure from ${a.title}" loading="lazy" decoding="async" />
       </a>
       <div class="a-body">
         <p class="journal">${a.journal}</p>
@@ -357,6 +435,23 @@ function renderMeta(){
 renderArticles();
 renderMeta();
 
+/* ---------- accessible mobile navigation ---------- */
+const menuToggle = $("#menuToggle");
+const primaryNav = $("#primary-nav");
+function closeMenu(){
+  if(!menuToggle || !primaryNav) return;
+  menuToggle.setAttribute("aria-expanded", "false");
+  primaryNav.classList.remove("open");
+}
+menuToggle?.addEventListener("click", () => {
+  const open = menuToggle.getAttribute("aria-expanded") !== "true";
+  menuToggle.setAttribute("aria-expanded", String(open));
+  primaryNav?.classList.toggle("open", open);
+  if(open) primaryNav?.querySelector("a")?.focus();
+});
+primaryNav?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+document.addEventListener("keydown", e => { if(e.key === "Escape") { closeMenu(); menuToggle?.focus(); } });
+
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
@@ -371,7 +466,7 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
   let w, h, t = 0, raf;
 
   function resize(){
-    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const dpr = Math.min(devicePixelRatio || 1, matchMedia("(max-width:900px)").matches ? 1 : 1.5);
     w = cv.clientWidth; h = cv.clientHeight;
     cv.width = w * dpr; cv.height = h * dpr;
     ctx.setTransform(dpr,0,0,dpr,0,0);
@@ -409,14 +504,25 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
     ctx.stroke();
   }
 
-  function loop(){ t += 0.008; draw(); raf = requestAnimationFrame(loop); }
+  let heroVisible = true;
+  function loop(){
+    if(!heroVisible || document.hidden) { raf = null; return; }
+    t += 0.008; draw(); raf = requestAnimationFrame(loop);
+  }
+  function startLoop(){ if(!reduced && heroVisible && !raf) loop(); }
+  function stopLoop(){ if(raf){ cancelAnimationFrame(raf); raf = null; } }
 
   resize();
   addEventListener("resize", () => { resize(); if(reduced) draw(); });
-  if(reduced){ draw(); } else { loop(); }
+  if(reduced){ draw(); } else { startLoop(); }
+  const heroObserver = new IntersectionObserver(([entry]) => {
+    heroVisible = entry.isIntersecting;
+    heroVisible ? startLoop() : stopLoop();
+  }, {threshold:0});
+  heroObserver.observe(document.querySelector(".hero"));
   document.addEventListener("visibilitychange", () => {
     if(reduced) return;
-    if(document.hidden) cancelAnimationFrame(raf); else loop();
+    document.hidden ? stopLoop() : startLoop();
   });
 })();
 </script>
