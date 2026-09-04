@@ -47,9 +47,10 @@
   #contours{position:absolute;inset:0;width:100%;height:100%;display:block}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,32,73,.25),rgba(5,32,73,0) 35%,rgba(5,32,73,.92) 88%);pointer-events:none}
   .hero-inner{position:relative;z-index:3;width:100%;max-width:1760px;margin:0 auto;padding:0 clamp(20px,4vw,56px) clamp(48px,7vh,88px);padding-right:clamp(280px,34vw,620px)}
-  .hero-media{position:absolute;z-index:1;right:clamp(20px,6vw,110px);bottom:clamp(72px,9vh,128px);width:min(40vw,640px);max-height:72vh;overflow:hidden;border:1px solid rgba(79,179,181,.48);background:var(--bone);box-shadow:0 26px 80px rgba(0,0,0,.28)}
+  .hero-media{position:absolute;z-index:1;right:clamp(20px,6vw,110px);bottom:clamp(72px,9vh,128px);width:min(40vw,640px);aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(79,179,181,.48);background:var(--navy-2);box-shadow:0 26px 80px rgba(0,0,0,.28)}
   .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,32,73,.12),transparent 34%,rgba(5,32,73,.04)),linear-gradient(0deg,rgba(5,32,73,.18),transparent 34%);pointer-events:none}
-  .hero-media img{display:block;width:100%;height:auto;max-height:72vh;object-fit:cover;object-position:center;filter:saturate(.9) contrast(1.04)}
+  .hero-media picture{display:block;width:100%;height:100%}
+  .hero-media img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:var(--navy-2);filter:saturate(.9) contrast(1.04)}
   .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:30px}
   .hero-actions .btn{min-height:46px}
   .hero-link{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-soft)}
@@ -153,9 +154,9 @@
     .bar nav.open{display:grid;gap:0}
     .bar nav a{display:block;padding:14px 12px;min-height:44px}
     .hero{min-height:0;display:block;padding-top:60px;overflow:hidden}
-    .hero-media{position:relative;top:auto;right:auto;bottom:auto;width:min(calc(100% - 40px),420px);height:auto;aspect-ratio:4/5;margin:16px auto 0;opacity:1;box-shadow:0 18px 48px rgba(0,0,0,.24)}
+    .hero-media{position:relative;top:auto;right:auto;bottom:auto;width:min(calc(100% - 40px),420px);height:auto;aspect-ratio:16/9;margin:16px auto 0;opacity:1;box-shadow:0 18px 48px rgba(0,0,0,.24)}
     .hero-media::after{background:linear-gradient(180deg,transparent 68%,rgba(5,32,73,.18))}
-    .hero-media img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:center}
+    .hero-media img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center}
     .hero::after{display:none}
     .hero-inner{padding:42px 20px 56px;background:var(--navy)}
     h1{font-size:clamp(44px,12vw,72px)}
@@ -310,7 +311,7 @@ const ARTICLES = [
     title: "Immersive Surgical Anatomy of the Frontotemporal-Orbitozygomatic Approach",
     journal: "Cureus 11(11): e6053 · Nov 2, 2019",
     authors: "Rodriguez Rubio R, Chae R, Kournoutas I, Abla A, McDermott M.",
-    thumbnail: "articles/frontotemporal-orbitozygomatic-approach/assets/images/fig-i05.jpg",
+    thumbnail: "articles/frontotemporal-orbitozygomatic-approach/assets/images/fig-i07.jpg",
     deck: "articles/frontotemporal-orbitozygomatic-approach/index.html",
     extras: [],
     assets: { models: 8, figures: 8, tables: 0, videos: 4 },
