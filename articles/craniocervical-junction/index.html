@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Craniocervical Junction — UCSF Surgical Neuroanatomy Collection</title>
+  <link rel="stylesheet" href="styles/root.css" />
+  <style>
+    .figure-media { background:#070d11; }
+    .figure-button { display:block; width:100%; height:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+    .figure-button img { width:100%; height:100%; object-fit:contain !important; }
+    .figure-hint { position:absolute;right:14px;bottom:12px;z-index:2;padding:6px 8px;background:rgba(7,13,16,.82);color:#c8d5d2;font:10px var(--font-mono);border:1px solid rgba(159,212,209,.28); }
+    .slide-content { min-height:0; }
+    .three-pane { display:grid; grid-template-columns:1fr 1fr 1.15fr; gap:16px; min-height:0; }
+    .three-pane > * { min-width:0; min-height:0; }
+    .table-panel { min-height:0; overflow:hidden; border:1px solid var(--color-border); background:#0d171d; }
+    .table-panel h3 { padding:14px 16px 8px; margin:0; }
+    .table-scroll { height:calc(100% - 42px); overflow:auto; }
+    table { width:100%; border-collapse:collapse; font-size:10.5px; line-height:1.25; }
+    th { position:sticky; top:0; z-index:1; padding:8px 9px; text-align:left; color:var(--color-primary); background:#122129; font:600 9px var(--font-mono); letter-spacing:.08em; text-transform:uppercase; }
+    td { padding:8px 9px; vertical-align:top; border-top:1px solid #26363d; color:#c6cfcc; }
+    td:first-child { color:var(--color-bone); font-weight:600; }
+    .compact-list { margin-top:20px; display:grid; gap:10px; }
+    .compact-list p { margin:0; padding-bottom:10px; border-bottom:1px solid var(--color-border); color:#c6cfcc; font-size:14px; line-height:1.32; }
+    .compact-list b { color:var(--color-bone); }
+    .source-box { border-top:1px solid var(--color-border); padding-top:17px; margin-top:22px; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center; padding:2vh 2vw; background:rgba(2,6,8,.97); }
+    .lightbox.open { display:flex; }
+    .lightbox img { width:96vw; height:92vh; max-width:none; max-height:none; object-fit:contain; border:1px solid #46575c; box-shadow:0 24px 80px #000; }
+    .lightbox .close { position:fixed; top:22px; right:28px; padding:8px 12px; border:1px solid #56676a; background:#0b151a; color:#dbe3df; cursor:pointer; font:12px var(--font-mono); }
+    .lightbox .lightbox-caption { position:fixed; left:3vw; bottom:18px; color:#adbab7; font:11px var(--font-mono); }
+    .author-list { max-width:620px; color:#aeb9b6; font-size:12px; line-height:1.5; }
+    .author-list b { color:var(--color-bone); }
+    .conclusion { max-width:960px; font-size:22px; line-height:1.42; color:#cbd3cf; }
+    .conclusion strong { color:var(--color-bone); font-weight:500; }
+    .cover-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:end; gap:60px; height:100%; }
+    .cover-rule { width:100%; max-width:520px; height:1px; background:var(--color-border); margin:32px 0 20px; }
+    .five { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:28px; }
+    .five div { border-top:2px solid var(--color-accent); padding-top:12px; color:var(--color-bone); font:15px var(--font-mono); }
+    @media (max-width:1100px){ .three-pane{grid-template-columns:1fr 1fr}.three-pane .table-panel{grid-column:1/-1;height:300px}.cover-grid{grid-template-columns:1fr}.five{grid-template-columns:repeat(3,1fr)} }
+  </style>
+</head>
+<body class="deck-shell presentation">
+  <main class="deck" id="deck" aria-label="Craniocervical junction teaching presentation">
+    <section class="slide active" data-title="Opening">
+      <div class="cover-grid">
+        <div>
+          <p class="eyebrow">UCSF Surgical Neuroanatomy Collection · resident teaching</p>
+          <div class="title-mark" aria-hidden="true"></div>
+          <h1>Craniocervical<br />junction</h1>
+          <p class="lede">A spatial anatomy lab for the region where the skull base meets the upper cervical spine.</p>
+          <div class="cover-rule"></div>
+          <div class="title-meta"><span>7 models</span><span>7 figures</span><span>2 source tables</span></div>
+          <p class="author-list"><b>Vera Vigo · Ankit Hirpara · Mohamed Yassin · Minghao Wang · Dean Chou · Pasquale De Bonis · Adib Abla · Roberto Rodriguez Rubio</b><br />Cureus 12(9): e10364 · published September 10, 2020</p>
+        </div>
+        <div>
+          <p class="question">Teaching frame</p>
+          <p class="lede" style="font-size:24px;color:var(--color-bone)">Bone → ligament → muscle → nerve / artery → measurement → corridor</p>
+          <div class="look"><b>How to use this deck</b> Click any figure to enlarge it. Rotate each model before reading the labels. Use the question on each slide to make the anatomy spatial.</div>
+        </div>
+      </div>
+      <div class="footer"><span>Based on Vigo et al., <i>Immersive Surgical Anatomy of the Craniocervical Junction</i>, Cureus 2020.</span><span class="slide-number">01 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Occipital bone">
+      <div><p class="eyebrow">01 · Bone</p><h2>The occiput sets<br />the cranial boundary.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 1 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig01-occipital.png" aria-label="Enlarge Figure 1"><img src="assets/images/full-fig01-occipital.png" alt="Multi-view figure of occipital bone anatomy" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 1</span><iframe title="Occipital bone volumetric model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/1ee6ff7bb0f44d35b811d071c8544408/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> condyles articulate with C1; the foramen magnum is the central corridor; the hypoglossal canal and jugular process define lateral boundaries.</span><span class="slide-number">02 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Atlas">
+      <div><p class="eyebrow">02 · Bone + danger zone</p><h2>C1 is a ring—<br />but its posterior arch is not empty.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 2 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig02-atlas.png" aria-label="Enlarge Figure 2"><img src="assets/images/full-fig02-atlas.png" alt="Multi-view figure of atlas anatomy" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 2</span><iframe title="Atlas volumetric model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/c839c1bbc3e8468eacb49190d7c7f3f5/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the V3 vertebral artery occupies the posterior-arch groove; the C1 dorsal ramus travels anterior to it. Check for ponticulus posticus and other variants.</span><span class="slide-number">03 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Axis and dens">
+      <div><p class="eyebrow">03 · Bone + pivot</p><h2>C2 gives the<br />junction its pivot.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 3 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig03-axis.png" aria-label="Enlarge Figure 3"><img src="assets/images/full-fig03-axis.png" alt="Multi-view figure of axis anatomy" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 3</span><iframe title="Axis volumetric model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/9aea7242553d427fb2680bd9d81ba48b/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the dens articulates with the C1 anterior arch; the transverse ligament constrains it; the atlas rotates around it.</span><span class="slide-number">04 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Ligaments">
+      <div><p class="eyebrow">04 · Stability</p><h2>Motion is earned<br />by restraint.</h2></div>
+      <div class="slide-content three-pane">
+        <div class="media figure-media"><span class="model-tag">figure 4 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig04-ligaments.png" aria-label="Enlarge Figure 4"><img src="assets/images/full-fig04-ligaments.png" alt="Multi-view figure of CCJ ligaments" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 4</span><iframe title="Anterior ligaments of the CCJ model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/c4e9b8f578ea414db9b05fb69b9838bb/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+        <div class="table-panel"><h3>Table 1 · ligaments</h3><div class="table-scroll"><table><thead><tr><th>Structure</th><th>Attachment / function</th></tr></thead><tbody>
+          <tr><td>Transverse</td><td>Dens ↔ posterior anterior arch of C1; main atlantoaxial stabilizer.</td></tr>
+          <tr><td>Alar</td><td>Dens ↔ skull base; limits excessive rotation.</td></tr>
+          <tr><td>Transverse occipital</td><td>Occipital condyles across foramen magnum; supports flexion and rotation.</td></tr>
+          <tr><td>Barkow</td><td>Anterior occipital condyles around dens; minimizes atlantoaxial extension.</td></tr>
+          <tr><td>Apical</td><td>Dens ↔ basion; contributes minimal atlantoaxial stabilization.</td></tr>
+          <tr><td>Tectorial membrane</td><td>Clivus ↔ axis; limits atlantooccipital extension and atlantoaxial flexion.</td></tr>
+          <tr><td>Posterior atlanto-occipital</td><td>Posterior C1 arch ↔ foramen magnum; minimal CCJ stability.</td></tr>
+          <tr><td>Accessory atlanto-axial</td><td>Dorsal axis ↔ posterior transverse ligament; limits axial rotation.</td></tr>
+          <tr><td>Anterior atlanto-occipital</td><td>Anterior C1 arch ↔ anterior foramen magnum; limits extension.</td></tr>
+          <tr><td>Anterior atlanto-axial</td><td>Inferior anterior C1 arch ↔ anterior axis body; limits extension.</td></tr>
+          <tr><td>Lateral atlanto-occipital</td><td>C1 transverse process ↔ jugular occiput; limits lateral flexion.</td></tr>
+        </tbody></table></div></div>
+      </div>
+      <div class="footer"><span><b>Resident question:</b> Which structure checks translation, and which structures check rotation?</span><span class="slide-number">05 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Muscles and triangles">
+      <div><p class="eyebrow">05 · Layered dissection</p><h2>Use the muscles<br />as a surgical map.</h2></div>
+      <div class="slide-content three-pane">
+        <div class="media figure-media"><span class="model-tag">figure 5 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig05-muscles.png" aria-label="Enlarge Figure 5"><img src="assets/images/full-fig05-muscles.png" alt="Multi-view figure of CCJ muscles" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 5</span><iframe title="CCJ muscles and layered anatomy model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/b566156f58cf4f5bba6029f14168b4b9/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+        <div class="table-panel"><h3>Table 2 · muscles</h3><div class="table-scroll"><table><thead><tr><th>Muscle</th><th>Origin → insertion</th><th>Function</th></tr></thead><tbody>
+          <tr><td>Rectus capitis posterior major</td><td>C2 spinous process → lateral inferior nuchal line</td><td>Rotation and extension.</td></tr>
+          <tr><td>Rectus capitis posterior minor</td><td>C1 posterior arch → medial inferior nuchal line</td><td>Backward extension.</td></tr>
+          <tr><td>Obliquus capitis superior</td><td>C1 transverse process → lateral inferior nuchal line</td><td>Extension / ipsilateral flexion.</td></tr>
+          <tr><td>Obliquus capitis inferior</td><td>C2 spinous process → C1 transverse process</td><td>Rotates head and C1.</td></tr>
+          <tr><td>Semispinalis capitis</td><td>C5–C8 articular + T1–T6 transverse processes → between nuchal lines</td><td>Extension and horizontal rotation.</td></tr>
+          <tr><td>Trapezius</td><td>Superior nuchal line → clavicle / scapula</td><td>Scapular movement and stabilization.</td></tr>
+          <tr><td>Splenius capitis</td><td>C7 spinous process → mastoid</td><td>Rotation and neck flexion.</td></tr>
+          <tr><td>Longissimus capitis</td><td>T1–T4 transverse processes → mastoid</td><td>Extension and rotation.</td></tr>
+          <tr><td>Sternocleidomastoid</td><td>Manubrium / clavicle → mastoid / superior nuchal line</td><td>Cervical rotation and flexion.</td></tr>
+          <tr><td>Longus capitis</td><td>C3–C6 transverse processes → basilar occiput</td><td>Neck flexion.</td></tr>
+          <tr><td>Longus colli</td><td>C3–C6 transverse + C5–T3 bodies → C1 arch / C2–C6</td><td>Cervical flexion.</td></tr>
+          <tr><td>Scalenes</td><td>C2–C7 transverse processes → first / second ribs</td><td>Lateral flexion and rib elevation.</td></tr>
+        </tbody></table></div></div>
+      </div>
+      <div class="footer"><span><b>Resident question:</b> Name the boundaries of the suboccipital triangle before naming its contents.</span><span class="slide-number">06 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Neurovascular anatomy">
+      <div><p class="eyebrow">06 · Neurovascular</p><h2>Trace the artery<br />through the whole corridor.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 6 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig06-neurovascular.png" aria-label="Enlarge Figure 6"><img src="assets/images/full-fig06-neurovascular.png" alt="Multi-view figure of CCJ neurovascular anatomy" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 6</span><iframe title="Neurovascular CCJ model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/3fc71731e1ce4012848120b767f21e43/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> V1 preforaminal → V2 foraminal → V3 atlantic around C1 → V4 intradural. Keep C1, C2, occipital, and cervical plexus structures in the same spatial map.</span><span class="slide-number">07 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Morphometrics and approach">
+      <div><p class="eyebrow">07 · Imaging + corridor</p><h2>Measure the relationships<br />that change the plan.</h2></div>
+      <div class="slide-content two-col">
+        <div class="media figure-media"><span class="model-tag">figure 7 · click to enlarge</span><button class="figure-button" data-full="assets/images/full-fig07-morphometrics.png" aria-label="Enlarge Figure 7"><img src="assets/images/full-fig07-morphometrics.png" alt="Craniocervical junction morphometric lines and angles" /></button><span class="figure-hint">↗ enlarge</span></div>
+        <div class="media"><span class="model-tag">interactive model 7 · surgical lines</span><iframe title="CCJ surgical lines model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/dbb8ff2b1b59429984b95032a09f7dc1/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> group measurements by decision—settling (Chamberlain / McGregor / Ranawat / Redlund–Johnell), foramen magnum (McRae), clivus–canal (Wackenheim), alignment, instability (Power’s ratio), and access geometry.</span><span class="slide-number">08 / 09</span></div>
+    </section>
+
+    <section class="slide" data-title="Article source">
+      <div><p class="eyebrow">08 · Source</p><h2>Article source</h2></div>
+      <div class="slide-content" style="display:flex;align-items:center;justify-content:center">
+        <div class="media figure-media" style="width:min(880px,90vw);height:430px"><span class="model-tag">article source</span><div style="padding:48px;display:flex;flex-direction:column;justify-content:center;height:100%"><p class="eyebrow">Vigo et al. · Cureus 2020</p><h3 style="font:400 42px/1.08 var(--font-display);color:var(--color-bone);margin-bottom:26px">Immersive Surgical Anatomy of the Craniocervical Junction</h3><div class="source-box small"><a href="https://www.cureus.com/articles/40530-immersive-surgical-anatomy-of-the-craniocervical-junction" target="_blank" rel="noopener">Open the article ↗</a><br /><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7549867/" target="_blank" rel="noopener">Open full-text media ↗</a></div></div></div>
+      </div>
+      <div class="footer"><span>Primary article and open-access media source.</span><span class="slide-number">09 / 09</span></div>
+    </section>
+  </main>
+
+  <nav class="nav" id="nav" aria-label="Slide navigation"></nav>
+  <div class="controls" aria-label="Presentation controls"><a href="../../index.html" style="padding:8px 11px;border:1px solid var(--color-border);background:rgba(10,16,21,.82);color:#b8c4c1;font:11px var(--font-mono);text-decoration:none">← collection</a><button id="prev" type="button">← previous</button><button id="next" type="button">next →</button><button id="fullscreen" type="button">fullscreen</button></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure"><button class="close" id="closeLightbox" type="button">close ×</button><img id="lightboxImage" alt="" /><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.slide')];
+      const nav = document.getElementById('nav');
+      let index = 0;
+      slides.forEach((slide, i) => { const b=document.createElement('button'); b.type='button'; b.textContent=String(i+1).padStart(2,'0'); b.title=slide.dataset.title||`Slide ${i+1}`; b.addEventListener('click',()=>show(i)); nav.appendChild(b); });
+      const buttons=[...nav.querySelectorAll('button')];
+      function show(i){ index=Math.max(0,Math.min(slides.length-1,i)); slides.forEach((s,n)=>s.classList.toggle('active',n===index)); buttons.forEach((b,n)=>b.classList.toggle('active',n===index)); slides[index].querySelectorAll('iframe[data-src]').forEach(frame=>{frame.src=frame.dataset.src; frame.removeAttribute('data-src');}); history.replaceState(null,'',`#${index+1}`); }
+      document.getElementById('prev').addEventListener('click',()=>show(index-1)); document.getElementById('next').addEventListener('click',()=>show(index+1)); document.getElementById('fullscreen').addEventListener('click',()=>document.documentElement.requestFullscreen?.());
+      document.addEventListener('keydown',e=>{ if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1);} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1);} if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1); if(e.key==='Escape')closeBox(); });
+      const box=document.getElementById('lightbox'), image=document.getElementById('lightboxImage'), caption=document.getElementById('lightboxCaption');
+      function openBox(button){ image.src=button.dataset.full; image.alt=button.querySelector('img')?.alt||''; caption.textContent=image.alt+' · click outside or press Escape to close'; box.classList.add('open'); document.getElementById('closeLightbox').focus(); }
+      function closeBox(){ box.classList.remove('open'); image.src=''; }
+      document.querySelectorAll('.figure-button').forEach(b=>{b.addEventListener('click',()=>openBox(b)); b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox(b);}});});
+      document.getElementById('closeLightbox').addEventListener('click',closeBox); box.addEventListener('click',e=>{if(e.target===box)closeBox();});
+      const requested=Number(location.hash.slice(1)); if(requested>=1&&requested<=slides.length)index=requested-1; show(index);
+    })();
+  </script>
+</body>
+</html>
