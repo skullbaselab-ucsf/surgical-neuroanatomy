@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computational Neuroanatomy of Language — UCSF Surgical Neuroanatomy Collection</title>
+  <link rel="stylesheet" href="styles/root.css" />
+  <style>
+    .figure-media { background:#070d11; }
+    .figure-button { display:block; width:100%; height:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+    .figure-button img { width:100%; height:100%; object-fit:contain !important; }
+    .figure-hint { position:absolute;right:14px;bottom:12px;z-index:2;padding:6px 8px;background:rgba(7,13,16,.82);color:#c8d5d2;font:10px var(--font-mono);border:1px solid rgba(159,212,209,.28); }
+    .slide-content { min-height:0; }
+    .table-panel { min-height:0; overflow:hidden; border:1px solid var(--color-border); background:#0d171d; }
+    .table-panel h3 { padding:14px 16px 8px; margin:0; }
+    .table-scroll { height:calc(100% - 42px); overflow:auto; }
+    table { width:100%; border-collapse:collapse; font-size:11.5px; line-height:1.25; }
+    th { position:sticky; top:0; z-index:1; padding:8px 9px; text-align:left; color:var(--color-primary); background:#122129; font:600 9px var(--font-mono); letter-spacing:.08em; text-transform:uppercase; }
+    td { padding:8px 9px; vertical-align:top; border-top:1px solid #26363d; color:#c6cfcc; }
+    td:first-child { color:var(--color-bone); font-weight:600; }
+    .source-box { border-top:1px solid var(--color-border); padding-top:17px; margin-top:22px; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center; padding:2vh 2vw; background:rgba(2,6,8,.97); }
+    .lightbox.open { display:flex; }
+    .lightbox img { width:96vw; height:92vh; max-width:none; max-height:none; object-fit:contain; border:1px solid #46575c; box-shadow:0 24px 80px #000; }
+    .lightbox .close { position:fixed; top:22px; right:28px; padding:8px 12px; border:1px solid #56676a; background:#0b151a; color:#dbe3df; cursor:pointer; font:12px var(--font-mono); }
+    .lightbox .lightbox-caption { position:fixed; left:3vw; bottom:18px; color:#adbab7; font:11px var(--font-mono); }
+    .author-list { max-width:660px; color:#aeb9b6; font-size:12px; line-height:1.5; }
+    .author-list b { color:var(--color-bone); }
+    .cover-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:end; gap:60px; height:100%; }
+    .cover-rule { width:100%; max-width:520px; height:1px; background:var(--color-border); margin:32px 0 20px; }
+    .single { display:grid; grid-template-columns:1fr; min-height:0; }
+    .single .media { min-height:0; }
+    @media (max-width:1100px){ .cover-grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body class="deck-shell presentation">
+  <main class="deck" id="deck" aria-label="Computational neuroanatomy of language teaching presentation">
+
+    <section class="slide active" data-title="Opening">
+      <div class="cover-grid">
+        <div>
+          <p class="eyebrow">UCSF Surgical Neuroanatomy Collection · resident teaching</p>
+          <div class="title-mark" aria-hidden="true"></div>
+          <h1>Computational<br />neuroanatomy<br />of language</h1>
+          <p class="lede">A compartmental framework from cranial landmarks to subcortical networks — the sylvian fissure as the key that organizes the white matter of speech.</p>
+          <div class="cover-rule"></div>
+          <div class="title-meta"><span>5 models</span><span>14 figures</span><span>6 tables</span></div>
+          <p class="author-list"><b>Marco Obersnel · Kenneth X. Probst · Chiara Angelini · Roberto Rodriguez Rubio</b><br />Cureus 18(7): e113416 · published July 26, 2026</p>
+        </div>
+        <div>
+          <p class="question">Teaching frame</p>
+          <p class="lede" style="font-size:24px;color:var(--color-bone)">Cranial landmarks → cortical anatomy → three sylvian compartments → tract by tract → models of language → intraoperative mapping</p>
+          <div class="look"><b>How to use this deck</b> Click any figure to enlarge it. Rotate each model and open its numbered annotations — the models are the main asset.</div>
+        </div>
+      </div>
+      <div class="footer"><span>Based on Obersnel et al., <i>Computational Neuroanatomy of Language: A Compartmental Framework From Cranial Landmarks to Subcortical Networks</i>, Cureus 2026.</span><span class="slide-number">01 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Craniometric points table">
+      <div><p class="eyebrow">01 · Cranial landmarks — table 1</p><h2>From skull<br />to cortex.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 1 · craniometric points and pertinent cortical-subcortical relationships</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td>Craniometric point</td>
+<td>Location</td>
+<td>Cortical relationship(s)</td>
+<td>Subcortical relationship(s)</td>
+</tr>
+<tr>
+<td>Bregma (Br)</td>
+<td>Junction of the coronal and sagittal sutures.</td>
+<td>The PreCG lies approximately 4.5 cm posterior to Br. More medially, the SRP, defined by the junction of the CS with the IHF, is located along the sagittal suture about 5 cm posterior to Br. Br is about 25 mm anterior to the line passing through AC and perpendicular to the AC-PC line, about 5 mm anterior to the anterior margin of the SMA.</td>
+<td>SRP is close to the primary motor cortex, where the CST begins. SRP is also approximately aligned, in the coronal plane, with the quadrigeminal cistern and the splenium of the corpus callosum. SMA is a termination of FAT and FST.</td>
+</tr>
+<tr>
+<td>Posterior coronal point (PCoP)</td>
+<td>1.5 cm posterior to Br and 3 cm lateral to the sagittal suture.</td>
+<td>SFS/PreCS point: junction between the SFS and PreCS; landmark for the omega region (hand motor activation area).</td>
+<td>The SFS/PreCS point is at the same coronal plane as the thalamus and the inferior aspect of the lateral ventricle, just behind the foramen of Monro. Underneath lie the thalamic radiations and internal capsule.</td>
+</tr>
+<tr>
+<td>Lambda (Lm)</td>
+<td>Junction of the lambdoid and sagittal sutures.</td>
+<td>The parieto-occipital fissure (where the parieto-occipital sulcus emerges inside the IHF) lies inferior and lateral to Lm, a landmark corresponding to the posterior aspect of the precuneus along the IHF.</td>
+<td>Transition of the corona radiata into the tapetum.</td>
+</tr>
+<tr>
+<td>Obelion</td>
+<td>Intersection of the sagittal suture with the line connecting the two foramina of the parietal emissary veins, 2.5 cm anterior to Lm.</td>
+<td>Superior parietal lobule; posterior portion of precuneus.</td>
+<td>Precuneus is the parietal termination of SLF I.</td>
+</tr>
+<tr>
+<td>Intraparietal point (IPP)</td>
+<td>6 cm anterior to Lm and 5 cm lateral to the sagittal suture.</td>
+<td>IPS/PoCS point: connection between the IPS and the post-central gyrus.</td>
+<td>Coronal projection of the IPS/PoCS point corresponds to the sagittal stratum (tapetum, auditory and optic radiation, ILF, MLF, and IFOF) and then the atrium of the lateral ventricle.</td>
+</tr>
+<tr>
+<td>Pterion (Pt)</td>
+<td>H-shaped sutural junction between the frontal, parietal, temporal, and sphenoid bones.</td>
+<td>Lies directly above the SF.</td>
+<td>Posterior STG is a termination of AF and MLF and has connections with ILF and IFOF.</td>
+</tr>
+<tr>
+<td>Superior squamous point (SSP)</td>
+<td>Intersection of the highest portion of the squamous suture with a vertical line that ascends from the preauricular depression.</td>
+<td>IRP is located at the intersection between the SF and the CS. Underneath lies the posterior aspect of the STG (Wernicke&#x27;s area) and Heschl&#x27;s gyrus.</td>
+<td>Temporal portion of AF; MLF; auditory radiations.</td>
+</tr>
+<tr>
+<td>Anterior squamous point (ASP)</td>
+<td>Posterior portion of the pterion, 2–2.5 cm anterior to the SSP.</td>
+<td>Underneath lies the ASyP, which is inferior to pars triangularis, immediately anterior to pars opercularis (Broca&#x27;s area).</td>
+<td>Pars opercularis of the IFG is a termination of AF, SLF III, and FAT.</td>
+</tr>
+<tr>
+<td>Posterior temporal point (PTP)</td>
+<td>3 cm above the ascending line from the meeting point between the parietomastoid and the squamosal sutures.</td>
+<td>PostSTS: posterior segment of the STS, where its central, predominantly horizontal branch enters the angular gyrus. PSyP: 2–3 cm anterosuperior to the PostSTS (anterior to the bifurcation of the STS).</td>
+<td>Its axial projection corresponds to the sagittal stratum (tapetum, auditory and optic radiations, ILF, MLF, and IFOF) and then the atrium of the lateral ventricle.</td>
+</tr>
+<tr>
+<td>Stephanion (St)</td>
+<td>Intersection between the STL and the coronal suture. Roughly 8 cm lateral to Br.</td>
+<td>IFS/PreCS point (meeting point of the IFS and PreCS): approximately 0.5 cm posterior to St. It identifies the PreCG and delimits the superior and posterior margin of the IFG. STL marks the superior limit of the IFG.</td>
+<td>SLF II intersection with FAT; SLF III; AF.</td>
+</tr>
+<tr>
+<td>Euryon (Eu)</td>
+<td>Palpable prominence in the middle of the parietal tuberosity.</td>
+<td>Always behind the PoCS. Landmark for the inferior parietal lobule, in particular, the posterior aspect of the SMG next to the AG. Located 1–3 cm lateral to the IPS and 1–2 cm anterior to the sulcus of Jensen.</td>
+<td>Underneath the SMG passes the AF. SMG is also the convergence point of SLF III and SLF-TP. Slightly above passes the SLF II. Geschwind&#x27;s area: anterior part of sagittal stratum (tapetum, auditory and optic radiation, ILF, MLF, and IFOF).</td>
+</tr>
+<tr>
+<td>Nasion (Na)</td>
+<td>Midpoint of the frontonasal suture, at its intersection with the nasal suture. Visible as a midline depression superior to the nose bridge and between the two eyes.</td>
+<td>Frontal pole.</td>
+<td>Aligned, in the axial plane, with the CC, approximately 12.5 cm anterior to the genu and 20 cm anterior to the splenium.</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> every craniometric point predicts a cortical area — and the white matter beneath it. The skull is the first map of the language network.</span><span class="slide-number">02 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Suprasylvian landmarks">
+      <div><p class="eyebrow">01 · Cranial landmarks — figure 1</p><h2>Landmarks of the<br />suprasylvian compartment.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 1 · craniometric landmarks — suprasylvian compartment</span><button class="figure-button" data-full="assets/images/fig-i01.jpg" aria-label="Enlarge Figure 1"><img src="assets/images/fig-i01.jpg" alt="Craniometric landmarks of the lateral skull and their cortical and subcortical relationships within the suprasylvian compartment" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the pterion lies directly over the sylvian fissure — the surface landmark that anchors the whole compartmental framework.</span><span class="slide-number">03 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Lambda landmark">
+      <div><p class="eyebrow">01 · Cranial landmarks — figure 2</p><h2>Lambda reads the<br />retrosylvian compartment.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 2 · lambda and the retrosylvian compartment</span><button class="figure-button" data-full="assets/images/fig-i02.jpg" aria-label="Enlarge Figure 2"><img src="assets/images/fig-i02.jpg" alt="Lateral-posterior view of the skull illustrating the lambda in relation to its underlying structures, focusing on the retrosylvian compartment" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the lambda — junction of the sagittal and lambdoid sutures — overlies the parieto-occipital region and the retrosylvian white matter.</span><span class="slide-number">04 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Infrasylvian landmarks">
+      <div><p class="eyebrow">01 · Cranial landmarks — figure 3</p><h2>Two surface keys<br />below the sylvian line.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 3 · surface landmarks of the infra- and retrosylvian compartments</span><button class="figure-button" data-full="assets/images/fig-i03.jpg" aria-label="Enlarge Figure 3"><img src="assets/images/fig-i03.jpg" alt="Lateral views of the skull illustrating two key surface landmarks of the infrasylvian and retrosylvian compartments, including the squamous suture point" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the squamous suture point, vertically aligned with the preauricular depression, projects to the inferior Rolandic point below the sylvian fissure.</span><span class="slide-number">05 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Cortical anatomy">
+      <div><p class="eyebrow">02 · Cortical anatomy — figure 4</p><h2>The cortical map<br />of language.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 4 · cortical gyri and sulci of the left hemisphere</span><button class="figure-button" data-full="assets/images/fig-i04.jpg" aria-label="Enlarge Figure 4"><img src="assets/images/fig-i04.jpg" alt="Lateral view of the cortex of the left hemisphere showing the main cortical gyri and sulci, with the inferior frontal gyrus subdivided into pars opercularis, triangularis and orbitalis" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the IFG splits into pars opercularis, triangularis and orbitalis — and the central sulcus is bracketed by its superior and inferior Rolandic points.</span><span class="slide-number">06 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Supplementary motor area">
+      <div><p class="eyebrow">02 · Cortical anatomy — figure 5</p><h2>The SMA,<br />medial and lateral.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 5 · supplementary motor area, medial and lateral views</span><button class="figure-button" data-full="assets/images/fig-i05.jpg" aria-label="Enlarge Figure 5"><img src="assets/images/fig-i05.jpg" alt="Medial and lateral views of the left hemisphere highlighting the supplementary motor area, with the SMA proper and pre-SMA anterior to the precentral gyrus" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> a vertical line through the anterior commissure, perpendicular to the AC–PC line, separates pre-SMA from SMA proper — the origin of the frontal aslant tract.</span><span class="slide-number">07 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Tract classification table">
+      <div><p class="eyebrow">03 · Subcortical networks — table 2</p><h2>Three compartments,<br />three depths.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 2 · classification of speech-related white matter tracts by sylvian compartment and depth</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td>Spatial relationship</td>
+<td>Depth</td>
+<td>Suprasylvian</td>
+<td>Infrasylvian</td>
+<td>Retrosylvian</td>
+</tr>
+<tr>
+<td rowspan="3">Lateral</td>
+<td>Superficial</td>
+<td>SLF III, SLF II</td>
+<td>ILF, AF</td>
+<td>SLF-tp, SLF III, SLF II</td>
+</tr>
+<tr>
+<td>Middle</td>
+<td>AF</td>
+<td>MLF</td>
+<td>AF, ILF</td>
+</tr>
+<tr>
+<td>Deep</td>
+<td>IFOF, FAT†, FST†</td>
+<td>UF, IFOF</td>
+<td>MLF, IFOF</td>
+</tr>
+<tr>
+<td>Reference structure</td>
+<td>-</td>
+<td>Corona radiata</td>
+<td>Internal capsule</td>
+<td>Inferior thalamic peduncle (optic and acoustic radiations)</td>
+</tr>
+<tr>
+<td>Medial</td>
+<td>-</td>
+<td>SLF I, cingulum</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> each tract is filed by its sylvian compartment (supra-, infra-, retrosylvian), its side of the corona radiata, and its depth — superficial, middle, deep.</span><span class="slide-number">08 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Sylvian compartments">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 6</p><h2>The sylvian fissure<br />organizes the network.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 6 · white matter tracts relative to the sylvian fissure</span><button class="figure-button" data-full="assets/images/fig-i06.jpg" aria-label="Enlarge Figure 6"><img src="assets/images/fig-i06.jpg" alt="Spatial organization of speech-related white matter tracts according to their relationship with the sylvian fissure, distinguishing suprasylvian, infrasylvian and retrosylvian compartments" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> one fissure, three compartments — suprasylvian, infrasylvian and retrosylvian — each holding its own set of association fibers.</span><span class="slide-number">09 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="White matter tracts model">
+      <div><p class="eyebrow">03 · Subcortical networks — model 1</p><h2>The language network,<br />in three dimensions.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 1 · speech white matter tracts — DTI</span><iframe title="Speech white matter tracts DTI model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/1ead940c704b4751bfc5b81d191f3fcb/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> dorsal and ventral stream pathways shown against the cortical surface and ventricular system — rotate the model to see each tract's compartment.</span><span class="slide-number">10 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="U-fibers">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 7</p><h2>U-fibers:<br />the local connections.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 7 · short association fibers (U-fibers)</span><button class="figure-button" data-full="assets/images/fig-i07.jpg" aria-label="Enlarge Figure 7"><img src="assets/images/fig-i07.jpg" alt="Short association fibers (U-fibers): cadaveric dissection connecting adjacent gyri along the cortical surface, with tractographic reconstruction" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the most superficial layer — short U-fibers linking adjacent gyri, widely distributed beneath the cortical ribbon.</span><span class="slide-number">11 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Superior longitudinal fasciculus">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 8</p><h2>The superior<br />longitudinal system.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 8 · superior longitudinal fasciculus</span><button class="figure-button" data-full="assets/images/fig-i08.jpg" aria-label="Enlarge Figure 8"><img src="assets/images/fig-i08.jpg" alt="Superior longitudinal fasciculus: cadaveric dissection showing SLF II within the centrum semiovale, SLF III more ventral and lateral, and the SLF-tp" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> SLF II runs dorsally in the centrum semiovale, SLF III more ventral and lateral, and the SLF-tp links the temporoparietal junction.</span><span class="slide-number">12 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="SLF FAT FST model">
+      <div><p class="eyebrow">03 · Subcortical networks — model 2</p><h2>SLF, FAT, FST —<br />dissected layer by layer.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 2 · speech white matter tracts SLF/FAT/FST</span><iframe title="Speech white matter tracts SLF FAT FST model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/10b3791ac1e34a9d8dc32bc334398534/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> a progressive virtual dissection — the FAT isolated first, intersecting the SLF II at the middle frontal gyrus, then the overlying cortex restored.</span><span class="slide-number">13 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Arcuate fasciculus">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 9</p><h2>The arcuate<br />fasciculus.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 9 · arcuate fasciculus</span><button class="figure-button" data-full="assets/images/fig-i09.jpg" aria-label="Enlarge Figure 9"><img src="assets/images/fig-i09.jpg" alt="Arcuate fasciculus: cadaveric dissection showing the ventral and dorsal components forming the characteristic C-shaped trajectory around the sylvian fissure" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> ventral and dorsal components wrap the sylvian fissure in the classic C-shape — the dorsal segment fans into the temporoparietal junction.</span><span class="slide-number">14 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="AF IFOF UF model">
+      <div><p class="eyebrow">03 · Subcortical networks — model 3</p><h2>AF meets<br />IFOF and UF.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 3 · AF and IFOF/UF combined</span><iframe title="Arcuate fasciculus and IFOF UF combined model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/cf140f081772455ba2bb80d657edfb5a/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> ventral and dorsal streams in one view — the IFOF, MLF and ILF form the superficial sagittal stratum of the retrosylvian compartment.</span><span class="slide-number">15 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="FAT and FST">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 10</p><h2>FAT and FST:<br />the frontal deep pair.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 10 · frontal aslant tract and frontostriatal tract</span><button class="figure-button" data-full="assets/images/fig-i10.jpg" aria-label="Enlarge Figure 10"><img src="assets/images/fig-i10.jpg" alt="FAT and FST: cadaveric dissection showing the frontal aslant tract arising from the SMA complex toward the pars opercularis, and the frontostriatal tract descending deeper toward the basal ganglia" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the FAT runs obliquely from the SMA complex to the pars opercularis; the FST descends deeper, from the same origin toward the basal ganglia.</span><span class="slide-number">16 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Ventral pathways model">
+      <div><p class="eyebrow">03 · Subcortical networks — model 4</p><h2>The ventral pathways,<br />step by step.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 4 · speech white matter tracts ILF/MLF/IFOF</span><iframe title="Speech white matter tracts ILF MLF IFOF model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/eec5c07346414f05903cc0f0ea5c3f80/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> a stepwise dissection of the ventral stream — opercula removed to expose the insula, then the ILF, MLF and IFOF in their sagittal-stratum relationship.</span><span class="slide-number">17 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Inferior longitudinal fasciculus">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 11</p><h2>The inferior longitudinal<br />fasciculus.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 11 · inferior longitudinal fasciculus</span><button class="figure-button" data-full="assets/images/fig-i11.jpg" aria-label="Enlarge Figure 11"><img src="assets/images/fig-i11.jpg" alt="Inferior longitudinal fasciculus: cadaveric dissection along the ventral temporal lobe, extending from the temporal pole toward the occipital region" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the ILF runs the length of the ventral temporal lobe, from the temporal pole to the occipital lobe — with the vertical occipital fasciculus behind it.</span><span class="slide-number">18 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Middle longitudinal fasciculus">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 12</p><h2>The middle longitudinal<br />fasciculus.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 12 · middle longitudinal fasciculus</span><button class="figure-button" data-full="assets/images/fig-i12.jpg" aria-label="Enlarge Figure 12"><img src="assets/images/fig-i12.jpg" alt="Middle longitudinal fasciculus: close-up of the temporoparietal junction showing the tract coursing within the superior temporal gyrus, near Heschl's gyrus" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the MLF courses within the superior temporal gyrus, medial and superior to Heschl's gyrus — the auditory gateway of the network.</span><span class="slide-number">19 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="UF and IFOF">
+      <div><p class="eyebrow">03 · Subcortical networks — figure 13</p><h2>UF and IFOF:<br />the ventral stream.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 13 · uncinate and inferior fronto-occipital fasciculi</span><button class="figure-button" data-full="assets/images/fig-i13.jpg" aria-label="Enlarge Figure 13"><img src="assets/images/fig-i13.jpg" alt="UF and IFOF: cadaveric dissection showing the hook-shaped uncinate fasciculus connecting the anterior temporal lobe with inferior frontal regions, and the long anteroposterior IFOF" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the UF hooks from the anterior temporal lobe to the inferior frontal region; the IFOF is the long anteroposterior highway behind it.</span><span class="slide-number">20 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Models of language">
+      <div><p class="eyebrow">04 · Models of language — figure 14</p><h2>Two models<br />of language.</h2></div>
+      <div class="slide-content single">
+        <div class="media figure-media"><span class="model-tag">figure 14 · classical vs dual-stream model of language</span><button class="figure-button" data-full="assets/images/fig-i14.jpg" aria-label="Enlarge Figure 14"><img src="assets/images/fig-i14.jpg" alt="Classical Wernicke-Geschwind model of language versus the dual-stream model, illustrated on a left hemisphere cadaveric dissection" /></button><span class="figure-hint">↗ enlarge</span></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> from the serial Wernicke–Geschwind pathway to the dual-stream model — a dorsal stream for sensorimotor mapping, a ventral stream for comprehension.</span><span class="slide-number">21 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Cortical comparison table">
+      <div><p class="eyebrow">04 · Models of language — table 3</p><h2>Cortex: classical<br />vs dual-stream.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 3 · cortical structures — classical model vs dual-stream model</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td colspan="2">Classical model</td>
+<td colspan="2">Dual-stream model</td>
+</tr>
+<tr>
+<td>Cortical area</td>
+<td>Function</td>
+<td>Cortical area</td>
+<td>Function</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Heschl&#x27;s gyrus, posterior STG</td>
+<td>Spectro-temporal analysis of speech sounds: registration of the sounds</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Posterior STG, STS</td>
+<td>Phonological analysis: ordering of the sounds into phonemes</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Posterior MTG, IFG</td>
+<td>Lexical interface: access semantic content and assume a meaning</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Temporal pole</td>
+<td>Combinatorial network</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Anterior IFG</td>
+<td>Articulatory network</td>
+</tr>
+<tr>
+<td>Wernicke&#x27;s area (i.e., posterior STG)</td>
+<td>Sensory word image creation</td>
+<td>Sylvian parietotemporal region (i.e., posterior STG, SMG)</td>
+<td>Sensorimotor interface: cortical input is translated into motor commands</td>
+</tr>
+<tr>
+<td>Broca&#x27;s area (i.e., pars triangularis and opercularis in IFG)</td>
+<td>Motor word image creation</td>
+<td>Pars triangularis and opercularis in IFG</td>
+<td>Phonological processing, articulation</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>Posterior MFG</td>
+<td>Articulation</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the same cortical regions, two interpretations — the dual-stream model redistributes classical areas across dorsal and ventral processing routes.</span><span class="slide-number">22 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="White matter comparison table">
+      <div><p class="eyebrow">04 · Models of language — table 4</p><h2>White matter: classical<br />vs dual-stream.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 4 · white matter structures, terminations and functions — classical vs dual-stream</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td colspan="2">Classical model</td>
+<td></td>
+<td colspan="3">Dual-stream model</td>
+</tr>
+<tr>
+<td>White matter tract</td>
+<td>Terminations</td>
+<td>Function</td>
+<td>White matter tract</td>
+<td>Terminations</td>
+<td>Function</td>
+</tr>
+<tr>
+<td>AF</td>
+<td>Frontal: Broca&#x27;s area (i.e., pars tri. and op. in IFG); Temporal: Wenicke&#x27;s area (i.e., posterior STG)</td>
+<td>Connection between sensory and motor areas</td>
+<td>AF</td>
+<td>Dorsal segment: Frontal (inf. MFG, sup. IFG); Temporal (post. ITG, MTG). Ventral segment: Frontal (pars op./tri.); Temporal (post. STG, MTG)</td>
+<td>Dorsal segment: lexical and semantic processing, prosody. Ventral segment: phonological processing</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>SLF III</td>
+<td>Frontal: pars tri. and op.; Parietal: SMG</td>
+<td>Phonological processing, working memory</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>SLF II</td>
+<td>Frontal: MFG; Parietal: AG</td>
+<td>Regulation of spatial and visuospatial awareness and attention</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>SLF I</td>
+<td>Frontal: olfactory/rostral gyrus (medial SFG); Parietal: precuneus, marginal sulcus</td>
+<td>Higher-level regulation of body-centered actions and motor initiation</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>SLF-tp</td>
+<td>Parietal: inf. parietal lobule; Temporal: post. STG and MTG</td>
+<td>Phonological processing</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>FAT</td>
+<td>Superior: pre-SMA/SMA proper; Inferior: pars opercularis</td>
+<td>Verbal fluency, speech initiation, lexical retrieval, grammatical processing, attention, working memory, music processing</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>FST</td>
+<td>Superior: SMA proper/pre-SMA; Inferior: basal ganglia, insula</td>
+<td>Motor initiation, potential role in speech control</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>ILF</td>
+<td>Temporal: temporal pole; Occipital: dorsolateral occipital cortex</td>
+<td>Object identification, visual recognition, language comprehension, lexical retrieval, reading</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>MLF</td>
+<td>Temporal: temporal pole, ant. STG; Parietal: SPL, precuneus; Occipital: lat. occipital/cuneus</td>
+<td>Higher-order acoustic functions; verbal-auditory learning; auditory information retrieval</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>UF</td>
+<td>Temporal: temporal pole, uncus, parahippocampus; Frontal: lat./med. orbitofrontal, nucleus accumbens</td>
+<td>Semantic function, famous face naming</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>IFOF</td>
+<td>Frontal: orbitofrontal, ant. MFG/IFG; Occipital: dorsolateral occipital lobe</td>
+<td>Semantic processing, visual recognition, multimodal integration, motor planning, reading, writing, speech comprehension and production</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> each tract's terminations define its stream — the framework turns anatomy into a surgical roadmap for preserving function.</span><span class="slide-number">23 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Stimulation mapping model">
+      <div><p class="eyebrow">05 · Intraoperative mapping — model 5</p><h2>Where stimulation<br />speaks.</h2></div>
+      <div class="slide-content single">
+        <div class="media"><span class="model-tag">interactive model 5 · direct electrical stimulation</span><iframe title="Direct electrical stimulation cortical mapping model" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen data-src="https://sketchfab.com/models/6ed3d3d350944b5fa5e83faae172fe09/embed?ui_theme=dark&ui_infos=0"></iframe></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> each cortical site annotated with its most common language disturbance during positive direct electrical stimulation — the functional map over the anatomy.</span><span class="slide-number">24 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Common errors table">
+      <div><p class="eyebrow">05 · Intraoperative mapping — table 5</p><h2>The errors each<br />region produces.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 5 · most common errors associated with anatomical regions</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td>Cortical location</td>
+<td>Side</td>
+<td>Error</td>
+</tr>
+<tr>
+<td colspan="3">Dorsal stream</td>
+</tr>
+<tr>
+<td rowspan="2">Pre-central gyrus</td>
+<td>Bilateral</td>
+<td>Speech arrest, anomia.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Dysarthria/anarthria, production errors, phonemic errors, semantic errors, morphosyntactic errors, verbal apraxia.</td>
+</tr>
+<tr>
+<td>Dorsolateral premotor cortex</td>
+<td>Dominant</td>
+<td>Anomia.</td>
+</tr>
+<tr>
+<td rowspan="2">IFG (pars opercularis and triangularis)</td>
+<td>Bilateral</td>
+<td>Speech arrest, anomia; semantic paraphasias (mostly in pars triangularis).</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Morphosyntactic errors, dysarthria/anarthria, phonemic errors, production errors.</td>
+</tr>
+<tr>
+<td rowspan="2">SMG</td>
+<td>Bilateral</td>
+<td>Semantic errors, phonemic paraphasias, speech arrest.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Anomia, semantic errors, dysarthria/anarthria, production errors, comprehension errors.</td>
+</tr>
+<tr>
+<td>SMA proper</td>
+<td>Bilateral</td>
+<td>Speech initiation difficulties.</td>
+</tr>
+<tr>
+<td colspan="3">Ventral stream</td>
+</tr>
+<tr>
+<td rowspan="2">Posterior STG</td>
+<td>Bilateral</td>
+<td>Semantic errors, anomia, comprehension errors.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Production errors, phonemic paraphasia.</td>
+</tr>
+<tr>
+<td rowspan="2">MTG</td>
+<td>Bilateral</td>
+<td>Anomia, reading errors, semantic errors (rare).</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Phonemic paraphasia, morphosyntactic errors.</td>
+</tr>
+<tr>
+<td>ITG</td>
+<td>Bilateral</td>
+<td>Reading errors, anomia, semantic errors (rare).</td>
+</tr>
+<tr>
+<td>Post-central gyrus</td>
+<td>Bilateral</td>
+<td>Speech arrest, verbal apraxia, dysarthria/anarthria.</td>
+</tr>
+<tr>
+<td>SPG</td>
+<td>Dominant</td>
+<td>Writing errors.</td>
+</tr>
+<tr>
+<td>Basal occipitotemporal cortex</td>
+<td>Bilateral</td>
+<td>Visual paraphasias.</td>
+</tr>
+<tr>
+<td>Subcortical location</td>
+<td>Side</td>
+<td>Error</td>
+</tr>
+<tr>
+<td colspan="3">Dorsal stream</td>
+</tr>
+<tr>
+<td>SLF III</td>
+<td>Bilateral</td>
+<td>Dysarthria/anarthria, or repetition of articulatory errors.</td>
+</tr>
+<tr>
+<td>SLF-tp</td>
+<td>Bilateral</td>
+<td>Phonemic repetition errors.</td>
+</tr>
+<tr>
+<td>SLF II</td>
+<td>Bilateral</td>
+<td>Transient decrease in the appreciation of visual stimuli on the contralateral side.</td>
+</tr>
+<tr>
+<td>SLF I</td>
+<td>Bilateral</td>
+<td>No language alterations.</td>
+</tr>
+<tr>
+<td>vAF</td>
+<td>Bilateral</td>
+<td>Phonemic paraphasia, repetition disorder, anomia.</td>
+</tr>
+<tr>
+<td>dAF</td>
+<td>Bilateral</td>
+<td>Impaired fluency.</td>
+</tr>
+<tr>
+<td>FAT</td>
+<td>Dominant</td>
+<td>Speech initiation difficulties, reduction of speech fluency, speech arrests, stuttering, production errors, morphosyntactic errors, semantic errors, perseverations.</td>
+</tr>
+<tr>
+<td rowspan="2">FST</td>
+<td>Bilateral</td>
+<td>Speech initiation difficulties with intact repetition, speech arrests.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Anomia.</td>
+</tr>
+<tr>
+<td colspan="3">Ventral stream</td>
+</tr>
+<tr>
+<td rowspan="2">ILF</td>
+<td>Bilateral</td>
+<td>No language disturbance, although reading errors, anomia without paraphasias are rarely reported.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Phonemic errors (rare).</td>
+</tr>
+<tr>
+<td>MLF</td>
+<td>Bilateral</td>
+<td>Often, no language alterations, rarely phonemic errors, and anomia.</td>
+</tr>
+<tr>
+<td>UF</td>
+<td>Dominant</td>
+<td>No language modifications; phonemic, production, and perseverations are rarely reported.</td>
+</tr>
+<tr>
+<td rowspan="2">IFOF</td>
+<td>Bilateral</td>
+<td>Semantic errors, comprehension errors.</td>
+</tr>
+<tr>
+<td>Dominant</td>
+<td>Anomia, perseverations, morphosyntactic errors, reading errors, writing errors.</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> anomia, paraphasia, apraxia of speech — each cortical and subcortical site has its signature error when stimulated or injured.</span><span class="slide-number">25 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Positive mapping table">
+      <div><p class="eyebrow">05 · Intraoperative mapping — table 6</p><h2>Where mapping<br />goes positive.</h2></div>
+      <div class="slide-content single">
+        <div class="table-panel"><h3>Table 6 · most common eloquent anatomical regions associated with positive mapping</h3><div class="table-scroll"><table>
+<tbody>
+<tr>
+<td>Type of Error</td>
+<td>Practical Example</td>
+<td>Diagnostic Task</td>
+<td>Cortical Sites</td>
+<td>Subcortical Sites</td>
+</tr>
+<tr>
+<td>Speech arrest</td>
+<td>Patient is asked to count from 1 to 20, but suddenly he cannot produce any sound.</td>
+<td>Picture naming, repetition, and counting.</td>
+<td>vPMC, Precentral gyrus, IFG</td>
+<td>SLF III, FAT, FST</td>
+</tr>
+<tr>
+<td>Dysarthria/Anarthria</td>
+<td>Patient says “table” but output is slurred or unintelligible.</td>
+<td>Word repetition, spontaneous speech.</td>
+<td>vPMC, PreCG</td>
+<td>SLF III</td>
+</tr>
+<tr>
+<td>Production errors</td>
+<td>Difficulty initiating speech or constructing sentences; e.g., says “runner” instead of “to run”.</td>
+<td>Spontaneous speech, narrative task.</td>
+<td>IFG, PreCG, SMA, STG</td>
+<td>FAT, FST</td>
+</tr>
+<tr>
+<td>Morphosyntactic errors</td>
+<td>Says “He goes to school” instead of “He goes to school”.</td>
+<td>Sentence construction.</td>
+<td>IFG, MTG</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Phonemic paraphasia</td>
+<td>Says “lorse” instead of “horse”.</td>
+<td>Picture naming, repetition.</td>
+<td>Posterior STG, IFG, MTG, SMG</td>
+<td>AF, SLF III</td>
+</tr>
+<tr>
+<td>Anomia</td>
+<td>Sees a chair, describes its use, but can’t retrieve the word.</td>
+<td>Picture naming, object use description.</td>
+<td>Posterior STG, MTG, ITG, dlPMC, IFG</td>
+<td>IFOF, UF</td>
+</tr>
+<tr>
+<td>Semantic paraphasia</td>
+<td>Shown a dog, says “cat” or “animal”.</td>
+<td>Picture naming, semantic association task.</td>
+<td>Posterior MTG, anterior SMG, IFG, STG</td>
+<td>IFOF, UF</td>
+</tr>
+<tr>
+<td>Perseverations</td>
+<td>Says “dog” repeatedly for “dog”, “cat”, and “house”.</td>
+<td>Series naming, object naming.</td>
+<td>—</td>
+<td>IFOF</td>
+</tr>
+<tr>
+<td>Reading errors</td>
+<td>Misreads or cannot read “bottle” (pure alexia, phonological errors).</td>
+<td>Word reading.</td>
+<td>MTG, ITG, IPL</td>
+<td>ILF, IFOF</td>
+</tr>
+<tr>
+<td>Comprehension errors</td>
+<td>Asked to point to the ceiling, but points to the floor.</td>
+<td>Object identification, command following.</td>
+<td>Frontal, temporal, and parietal lobes</td>
+<td>IFOF</td>
+</tr>
+<tr>
+<td>Speech initiation difficulty</td>
+<td>Delayed or absent initiation of speech after a prompt.</td>
+<td>Narrative description, open question.</td>
+<td>SMA</td>
+<td>FAT, FST</td>
+</tr>
+<tr>
+<td>Writing errors</td>
+<td>Difficulty writing words or phrases, illegible output.</td>
+<td>Writing task.</td>
+<td>Superior parietal gyrus (SPG)</td>
+<td>IFOF</td>
+</tr>
+<tr>
+<td>Verbal apraxia</td>
+<td>Inconsistent articulation errors, effortful attempts (e.g., “bo-tone”, “boh-ttone”).</td>
+<td>Repetition, sound articulation tasks.</td>
+<td>Postcentral gyrus</td>
+<td>SLF III</td>
+</tr>
+<tr>
+<td>Visual paraphasias</td>
+<td>Sees a banana and says, “yellow curved thing”.</td>
+<td>Picture naming, object feature description.</td>
+<td>Basal occipitotemporal cortex</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div></div>
+      </div>
+      <div class="footer"><span><b>Concept:</b> the intraoperative bridge — positive responses during awake mapping confirm the anatomical framework at the single-patient level.</span><span class="slide-number">26 / 27</span></div>
+    </section>
+
+    <section class="slide" data-title="Article source">
+      <div><p class="eyebrow">06 · Source</p><h2>Article source</h2></div>
+      <div class="slide-content" style="display:flex;align-items:center;justify-content:center">
+        <div class="media figure-media" style="width:min(880px,90vw);height:430px"><span class="model-tag">article source</span><div style="padding:48px;display:flex;flex-direction:column;justify-content:center;height:100%"><p class="eyebrow">Obersnel et al. · Cureus 2026</p><h3 style="font:400 38px/1.08 var(--font-display);color:var(--color-bone);margin-bottom:26px">Computational Neuroanatomy of Language: A Compartmental Framework From Cranial Landmarks to Subcortical Networks</h3><div class="source-box small"><a href="https://www.cureus.com/articles/495816-computational-neuroanatomy-of-language-a-compartmental-framework-from-cranial-landmarks-to-subcortical-networks" target="_blank" rel="noopener">Open the article ↗</a><br /><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13524213/" target="_blank" rel="noopener">Open full-text media ↗</a><br /><a href="https://sketchfab.com/SBCVL_UCSF" target="_blank" rel="noopener">SBCVL_UCSF on Sketchfab ↗</a></div></div></div>
+      </div>
+      <div class="footer"><span>Primary article and open-access media source. All five volumetric models of the article are embedded as interactive models above.</span><span class="slide-number">27 / 27</span></div>
+    </section>
+  </main>
+
+  <nav class="nav" id="nav" aria-label="Slide navigation"></nav>
+  <div class="controls" aria-label="Presentation controls"><a href="../../index.html" style="padding:8px 11px;border:1px solid var(--color-border);background:rgba(10,16,21,.82);color:#b8c4c1;font:11px var(--font-mono);text-decoration:none">← collection</a><button id="prev" type="button">← previous</button><button id="next" type="button">next →</button><button id="fullscreen" type="button">fullscreen</button></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure"><button class="close" id="closeLightbox" type="button">close ×</button><img id="lightboxImage" alt="" /><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.slide')];
+      const nav = document.getElementById('nav');
+      let index = 0;
+      slides.forEach((slide, i) => { const b=document.createElement('button'); b.type='button'; b.textContent=String(i+1).padStart(2,'0'); b.title=slide.dataset.title||`Slide ${i+1}`; b.addEventListener('click',()=>show(i)); nav.appendChild(b); });
+      const buttons=[...nav.querySelectorAll('button')];
+      function show(i){
+        index=Math.max(0,Math.min(slides.length-1,i));
+        slides.forEach((s,n)=>{ s.classList.toggle('active',n===index); });
+        buttons.forEach((b,n)=>b.classList.toggle('active',n===index));
+        slides[index].querySelectorAll('iframe[data-src]').forEach(frame=>{frame.src=frame.dataset.src; frame.removeAttribute('data-src');});
+        history.replaceState(null,'',`#${index+1}`);
+      }
+      document.getElementById('prev').addEventListener('click',()=>show(index-1)); document.getElementById('next').addEventListener('click',()=>show(index+1)); document.getElementById('fullscreen').addEventListener('click',()=>document.documentElement.requestFullscreen?.());
+      document.addEventListener('keydown',e=>{ if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1);} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1);} if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1); if(e.key==='Escape')closeBox(); });
+      const box=document.getElementById('lightbox'), image=document.getElementById('lightboxImage'), caption=document.getElementById('lightboxCaption');
+      function openBox(button){ image.src=button.dataset.full; image.alt=button.querySelector('img')?.alt||''; caption.textContent=image.alt+' · click outside or press Escape to close'; box.classList.add('open'); document.getElementById('closeLightbox').focus(); }
+      function closeBox(){ box.classList.remove('open'); image.src=''; }
+      document.querySelectorAll('.figure-button').forEach(b=>{b.addEventListener('click',()=>openBox(b)); b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openBox(b);}});});
+      document.getElementById('closeLightbox').addEventListener('click',closeBox); box.addEventListener('click',e=>{if(e.target===box)closeBox();});
+      const requested=Number(location.hash.slice(1)); if(requested>=1&&requested<=slides.length)index=requested-1; show(index);
+    })();
+  </script>
+</body>
+</html>
